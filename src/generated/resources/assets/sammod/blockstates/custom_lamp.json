@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "lightlevel=0": {
+      "model": "sammod:block/custom_lamp_off"
+    },
+    "lightlevel=1": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=10": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=11": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=12": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=13": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=14": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=15": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=2": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=3": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=4": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=5": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=6": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=7": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=8": {
+      "model": "sammod:block/custom_lamp_on"
+    },
+    "lightlevel=9": {
+      "model": "sammod:block/custom_lamp_on"
+    }
+  }
+}

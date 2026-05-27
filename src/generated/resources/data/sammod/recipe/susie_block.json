@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "sammod:catnip"
+    },
+    "B": {
+      "item": "minecraft:cod"
+    }
+  },
+  "pattern": [
+    "BAA",
+    "ABA",
+    "AAB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sammod:susie_block"
+  }
+}

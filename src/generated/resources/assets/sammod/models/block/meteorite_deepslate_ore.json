@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sammod:block/meteorite_deepslate_ore"
+  }
+}

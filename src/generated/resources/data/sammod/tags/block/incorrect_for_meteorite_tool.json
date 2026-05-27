@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#sammod:needs_meteorite_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ]
+}

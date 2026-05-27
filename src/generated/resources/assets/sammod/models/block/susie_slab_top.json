@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "sammod:block/susie_tnt",
+    "side": "sammod:block/susie_tnt",
+    "top": "sammod:block/susie_tnt"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "sammod:meteorite_block",
+    "sammod:meteorite_ore",
+    "sammod:meteorite_deepslate_ore",
+    "sammod:raw_meteorite_block",
+    "#minecraft:needs_diamond_tool"
+  ]
+}

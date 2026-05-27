@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sammod:block/meteorite_deepslate_ore"
+    }
+  }
+}

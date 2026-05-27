@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meteorite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sammod:meteorite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sammod:meteorite_ingot_from_blasting_meteorite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meteorite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sammod:meteorite_ingot_from_blasting_meteorite_ore"
+    ]
+  }
+}

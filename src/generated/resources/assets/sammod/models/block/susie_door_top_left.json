@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "sammod:block/susie_door_bottom",
+    "top": "sammod:block/susie_door_top"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "sammod:meteorite_ingot"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AA ",
+    " B ",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "sammod:meteorite_hoe"
+  }
+}

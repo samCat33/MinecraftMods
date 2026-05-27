@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "susie",
+  "ingredients": [
+    {
+      "item": "sammod:susie_tnt"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "sammod:susie_button"
+  }
+}

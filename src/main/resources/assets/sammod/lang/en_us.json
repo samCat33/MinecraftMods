@@ -1,0 +1,44 @@
+{
+  "item.sammod.catnip": "Catnip",
+  "item.sammod.raw_meteorite": "Raw Meteorite",
+  "item.sammod.meteorite_ingot": "Meteorite Ingot",
+  "item.sammod.midas_touch": "Midas Touch",
+
+  "item.sammod.meteorite_pickaxe": "Meteorite Pickaxe",
+  "item.sammod.meteorite_axe": "Meteorite Axe",
+  "item.sammod.meteorite_sword": "Meteorite Sword",
+  "item.sammod.meteorite_shovel": "Meteorite Shovel",
+  "item.sammod.meteorite_hoe": "Meteorite Hoe",
+
+
+  "block.sammod.susie_tnt": "SUSIE TNT",
+  "block.sammod.meteorite_ore": "Meteorite Ore",
+  "block.sammod.meteorite_deepslate_ore": "Deepslate Meteorite Ore",
+  "block.sammod.meteorite_block": "Meteorite Block",
+  "block.sammod.raw_meteorite_block": "Raw Meteorite Block",
+  "block.sammod.cat_note_block": "Cat Note Block",
+
+  "block.sammod.susie_block": "Susie Block",
+  "block.sammod.susie_button": "Susie Button",
+  "block.sammod.susie_door": "Susie Door",
+  "block.sammod.susie_fence": "Susie Fence",
+  "block.sammod.susie_fence_gate": "Susie Fence Gate",
+  "block.sammod.susie_pressure_plate": "Susie Pressure Plate",
+  "block.sammod.susie_slab": "Susie Slab",
+  "block.sammod.susie_stairs": "Susie Stairs",
+  "block.sammod.susie_trapdoor": "Susie Trapdoor",
+  "block.sammod.susie_wall": "Susie Wall",
+
+
+  "block.sammod.custom_lamp": "Custom Lamp",
+  "block.sammod.coal_converter": "Coal Converter",
+
+  "creativetab.sammod.samitems": "Mod Items",
+  "creativetab.sammod.samblocks": "Mod Blocks",
+
+  "tooltip.sammod.susie_tnt.tooltip_shift": "§4Try interacting with it while holding catnip§r",
+  "tooltip.sammod.susie_tnt.tooltip_no_shift": "§lWhy does it say this is TNT?§r",
+  "tooltip.midas_touch1": "Use this on any block (or entity)",
+  "tooltip.midas_touch2": "§eAnd all will turn to gold!§r",
+  "tooltip.sammod.coal_converter": "Throw §oStone§r or §oCobbled Deepslate§r on this to turn it into §o§lCoal!§r"
+}

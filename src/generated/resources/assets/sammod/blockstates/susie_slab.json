@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sammod:block/susie_slab"
+    },
+    "type=double": {
+      "model": "sammod:block/susie_tnt"
+    },
+    "type=top": {
+      "model": "sammod:block/susie_slab_top"
+    }
+  }
+}

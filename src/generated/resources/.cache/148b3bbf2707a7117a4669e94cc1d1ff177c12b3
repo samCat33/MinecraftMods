@@ -1,0 +1,9 @@
+// 1.21	2026-05-26T14:09:49.7634517	Tags for minecraft:block mod id sammod
+7a6d9bb2cb252382bb54262a74df34bbafad7a22 data/minecraft/tags/block/fences.json
+bb18d6347f932a5905306e066563d26b01d34e7e data/minecraft/tags/block/fence_gates.json
+2073c6bfa22b4b71bcf44fbac8f08afd14788590 data/minecraft/tags/block/mineable/pickaxe.json
+a2623d4eff7adced21ee33ebbfc42abfa3692d4c data/minecraft/tags/block/needs_diamond_tool.json
+ababeac45115c340ee5e489b0b888ec2f41a8a0e data/minecraft/tags/block/needs_iron_tool.json
+754d2728e89449e083e9c73475099d2abe64f366 data/minecraft/tags/block/walls.json
+507be80588a0462bd89e153667799ebebc752200 data/sammod/tags/block/incorrect_for_meteorite_tool.json
+0fa840a25ebf9f380799bb80ae016ef717f40a01 data/sammod/tags/block/needs_meteorite_tool.json

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 80,
+  "experience": 3.0,
+  "group": "meteorite",
+  "ingredient": {
+    "item": "sammod:raw_meteorite"
+  },
+  "result": {
+    "id": "sammod:meteorite_ingot"
+  }
+}

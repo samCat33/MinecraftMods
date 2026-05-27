@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "sammod:block/susie_pressure_plate"
+    },
+    "powered=true": {
+      "model": "sammod:block/susie_pressure_plate_down"
+    }
+  }
+}

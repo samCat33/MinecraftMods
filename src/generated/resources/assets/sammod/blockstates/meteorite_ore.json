@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sammod:block/meteorite_ore"
+    }
+  }
+}

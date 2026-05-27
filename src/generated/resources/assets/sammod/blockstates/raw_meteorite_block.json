@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sammod:block/raw_meteorite_block"
+    }
+  }
+}

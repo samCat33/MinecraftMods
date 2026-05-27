@@ -1,0 +1,122 @@
+package com.example.sammod;
+
+import com.example.sammod.block.ModBlocks;
+import com.example.sammod.component.ModDataComponentTypes;
+import com.example.sammod.item.ModCreativeModeTabs;
+import com.example.sammod.item.ModItems;
+import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
+
+// The value here should match an entry in the META-INF/mods.toml file
+@Mod(SamMod.MOD_ID)
+public class SamMod
+{
+    // Define mod id in a common place for everything to reference
+    public static final String MOD_ID = "sammod";
+    // Directly reference a slf4j logger
+    private static final Logger LOGGER = LogUtils.getLogger();
+    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
+
+    public SamMod()
+    {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // Register the commonSetup method for modloading
+        modEventBus.addListener(this::commonSetup);
+
+        // Register ourselves for server and other game events we are interested in
+        MinecraftForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModDataComponentTypes.register(modEventBus);
+
+        // Register the item to a creative tab
+        modEventBus.addListener(this::addCreative);
+
+        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event)
+    {
+
+    }
+
+    // Add the example block item to the building blocks tab
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
+    {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.CATNIP);
+            event.accept(ModItems.RAW_METEORITE);
+            event.accept(ModItems.METEORITE_INGOT);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ModItems.MIDAS_TOUCH);
+            event.accept(ModItems.METEORITE_SWORD.get());
+            event.accept(ModItems.METEORITE_AXE.get());
+
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.METEORITE_PICKAXE.get());
+            event.accept(ModItems.METEORITE_SHOVEL.get());
+            event.accept(ModItems.METEORITE_HOE.get());
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SUSIE_TNT);
+            event.accept(ModBlocks.METEORITE_ORE);
+            event.accept(ModBlocks.METEORITE_DEEPSLATE_ORE);
+            event.accept(ModBlocks.METEORITE_BLOCK);
+            event.accept(ModBlocks.RAW_METEORITE_BLOCK);
+            event.accept(ModBlocks.CAT_NOTE_BLOCK);
+            event.accept(ModBlocks.CUSTOM_LAMP);
+            event.accept(ModBlocks.COAL_CONVERTER);
+            event.accept(ModBlocks.SUSIE_BLOCK.get());
+            event.accept(ModBlocks.SUSIE_BUTTON.get());
+            event.accept(ModBlocks.SUSIE_DOOR.get());
+            event.accept(ModBlocks.SUSIE_FENCE.get());
+            event.accept(ModBlocks.SUSIE_FENCE_GATE.get());
+            event.accept(ModBlocks.SUSIE_PRESSURE_PLATE.get());
+            event.accept(ModBlocks.SUSIE_SLAB.get());
+            event.accept(ModBlocks.SUSIE_STAIRS.get());
+            event.accept(ModBlocks.SUSIE_TRAPDOOR.get());
+            event.accept(ModBlocks.SUSIE_WALL.get());
+        }
+    }
+
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event)
+    {
+
+    }
+
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents
+    {
+
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)
+        {
+
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sammod:block/cat_note_block"
+    }
+  }
+}
