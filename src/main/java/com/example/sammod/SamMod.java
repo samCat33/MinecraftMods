@@ -26,10 +26,8 @@ public class SamMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "sammod";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
+    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public SamMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,6 +38,7 @@ public class SamMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        //Register creative mode tabs, items, blocks, and data component types
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
