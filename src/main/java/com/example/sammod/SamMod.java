@@ -4,6 +4,7 @@ import com.example.sammod.block.ModBlocks;
 import com.example.sammod.component.ModDataComponentTypes;
 import com.example.sammod.item.ModCreativeModeTabs;
 import com.example.sammod.item.ModItems;
+import com.example.sammod.util.ModItemProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -69,7 +70,15 @@ public class SamMod
             event.accept(ModItems.MIDAS_TOUCH);
             event.accept(ModItems.METEORITE_SWORD.get());
             event.accept(ModItems.METEORITE_AXE.get());
+            event.accept(ModItems.METEORITE_HAMMER.get());
 
+            event.accept(ModItems.METEORITE_HELMET.get());
+            event.accept(ModItems.METEORITE_CHESTPLATE.get());
+            event.accept(ModItems.METEORITE_LEGGINGS.get());
+            event.accept(ModItems.METEORITE_BOOTS.get());
+
+            event.accept(ModItems.METEORITE_HORSE_ARMOR.get());
+            event.accept(ModItems.SUPER_BOW.get());
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
@@ -77,6 +86,7 @@ public class SamMod
             event.accept(ModItems.METEORITE_SHOVEL.get());
             event.accept(ModItems.METEORITE_HOE.get());
         }
+
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SUSIE_TNT);
@@ -115,7 +125,8 @@ public class SamMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            //CustomItemProperties is on the client side
+            ModItemProperties.addCustomItemProperties();
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sammod:item/midas_touch"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "sammod:used": 1
+      },
+      "model": "sammod:item/midas_touch_used"
+    }
+  ]
+}

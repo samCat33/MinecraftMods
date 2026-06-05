@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -164,6 +165,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         buttonBuilder(ModBlocks.SUSIE_BUTTON.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
                 .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+
+        trimSmithing(pRecipeOutput, ModItems.BIG_S_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "big_s"));
 
     }
 

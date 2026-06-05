@@ -47,5 +47,7 @@ public class DataGenerators {
 
         //This will generate our block models and their respective states
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new ModDataPackEntries(packOutput, lookupProvider));
     }
 }

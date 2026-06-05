@@ -9,6 +9,19 @@
   "item.sammod.meteorite_sword": "Meteorite Sword",
   "item.sammod.meteorite_shovel": "Meteorite Shovel",
   "item.sammod.meteorite_hoe": "Meteorite Hoe",
+  "item.sammod.meteorite_hammer": "Meteorite Hammer",
+
+  "item.sammod.meteorite_helmet": "Meteorite Helmet",
+  "item.sammod.meteorite_chestplate": "Meteorite Chestplate",
+  "item.sammod.meteorite_leggings": "Meteorite Leggings",
+  "item.sammod.meteorite_boots": "Meteorite Boots",
+
+  "item.sammod.super_bow": "Super Bow",
+
+  "item.sammod.meteorite_horse_armor": "Meteorite Horse Armor",
+  "item.sammod.big_s_armor_trim_smithing_template": "Big S Smithing Template",
+  "trim_pattern.sammod.big_s": "Big S",
+  "trim_material.sammod.meteorite_ingot": "Meteorite Material",
 
 
   "block.sammod.susie_tnt": "SUSIE TNT",

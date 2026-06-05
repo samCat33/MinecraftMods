@@ -17,7 +17,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> SAMMODITEMS =
             CREATIVE_MODE_TABS.register("moditems",
                     () ->CreativeModeTab.builder().icon(() ->
-                            new ItemStack(ModItems.CATNIP.get()))
+                            new ItemStack(ModItems.MIDAS_TOUCH.get()))
                             .title(Component.translatable("creativetab.sammod.samitems"))
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModItems.CATNIP.get());
@@ -29,6 +29,17 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.METEORITE_AXE.get());
                                 output.accept(ModItems.METEORITE_SHOVEL.get());
                                 output.accept(ModItems.METEORITE_HOE.get());
+                                output.accept(ModItems.METEORITE_HAMMER.get());
+
+                                output.accept(ModItems.METEORITE_HELMET.get());
+                                output.accept(ModItems.METEORITE_CHESTPLATE.get());
+                                output.accept(ModItems.METEORITE_LEGGINGS.get());
+                                output.accept(ModItems.METEORITE_BOOTS.get());
+
+                                output.accept(ModItems.METEORITE_HORSE_ARMOR.get());
+                                output.accept(ModItems.BIG_S_SMITHING_TEMPLATE.get());
+
+                                output.accept(ModItems.SUPER_BOW.get());
 
                             }).build());
 

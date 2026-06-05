@@ -1,0 +1,6 @@
+{
+  "parent": "sammod:item/super_bow",
+  "textures": {
+    "layer0": "sammod:item/super_bow_pulling_2"
+  }
+}

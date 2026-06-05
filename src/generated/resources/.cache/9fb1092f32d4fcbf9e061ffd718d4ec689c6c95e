@@ -1,4 +1,4 @@
-// 1.21	2026-05-26T14:09:49.7614539	Recipes
+// 1.21	2026-06-04T11:54:04.4811935	Recipes
 b9bcbc338036adf30b6fc323bb6c69121f2b58d0 data/sammod/advancement/recipes/building_blocks/coal_converter.json
 be65a57b6bca17ff205c54630ea780a8c166401b data/sammod/advancement/recipes/building_blocks/meteorite_axe.json
 0383d62dc025b0e9997498f1d3c87c3e2082ee6c data/sammod/advancement/recipes/building_blocks/meteorite_hoe.json
@@ -12,6 +12,7 @@ efbdbdffc8cc9f2cace9a296f81f23794614e4cd data/sammod/advancement/recipes/buildin
 f4ab3a36b8bc2e96f19c3bf2ea21b3235e23efb6 data/sammod/advancement/recipes/building_blocks/susie_wall.json
 034b28b59f239557dc2a064a3fd962df08876317 data/sammod/advancement/recipes/decorations/susie_fence.json
 fa8dfe2b4b3c0b0909a6d90fd1defa50f2d3486b data/sammod/advancement/recipes/food/catnip.json
+5ba016a115cbc3bac11bf598188f49dbd6d6ae9c data/sammod/advancement/recipes/misc/big_s.json
 d64b31d6d83c5a18d44a7b7255763779959eee2e data/sammod/advancement/recipes/misc/meteorite_block.json
 5836c56ffbae6becdba5e0b575b942ecd84ce586 data/sammod/advancement/recipes/misc/meteorite_ingot.json
 99bf895965d4c19920ce96b0effd8771515d37fd data/sammod/advancement/recipes/misc/meteorite_ingot_from_blasting_meteorite_deepslate_ore.json
@@ -28,6 +29,7 @@ a36f775369ce2cc583a04bd62a35a83480b4d5be data/sammod/advancement/recipes/redston
 b6c3ed74d44fd72765e2f15f40e928d55a1778c6 data/sammod/advancement/recipes/redstone/susie_fence_gate.json
 18f236538f029dbdb91d422bfe980baa38f9142a data/sammod/advancement/recipes/redstone/susie_pressure_plate.json
 128073452738f276be4ae268dc0a6e0622f8db60 data/sammod/advancement/recipes/redstone/susie_trapdoor.json
+970d74ee444c7263eb610f861915943014634847 data/sammod/recipe/big_s.json
 ed499383b4b4081c4f26da3efbe30b1bd03488ae data/sammod/recipe/catnip.json
 7b76a8aa863c015a7b2b3bc582fd419defb09bd7 data/sammod/recipe/coal_converter.json
 9f1fae50bc85a7644e1e021a027f7fee3efd08c0 data/sammod/recipe/meteorite_axe.json
