@@ -20,6 +20,7 @@ public class HammerItem extends DiggerItem {
         super(pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
     }
 
+    //Mines a 3x3 area
     public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initialPos, ServerPlayer player){
         List<BlockPos> positions = new ArrayList<>();
 
