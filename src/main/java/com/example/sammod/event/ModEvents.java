@@ -5,6 +5,7 @@ import com.example.sammod.block.ModBlocks;
 import com.example.sammod.item.ModItems;
 import com.example.sammod.item.items.HammerItem;
 import com.example.sammod.item.items.MidasTouchItem;
+import com.example.sammod.potion.ModPotions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -13,10 +14,16 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
@@ -84,5 +91,37 @@ public class ModEvents {
             player.sendSystemMessage(Component.literal("Why are you blowing up Susie? MEANIE >:("));
             player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1));
         }
+    }
+
+    //This event changes the base damage of an arrow shot from the super bow
+    @SubscribeEvent
+    public static void onArrowShoot(EntityJoinLevelEvent event){
+        //If the object is an unloaded arrow
+        //and we are not on the client side
+        if (event.getEntity() instanceof AbstractArrow arrow &&
+                !event.getLevel().isClientSide()){
+
+
+            //If the arrow was shot by a player
+            if (arrow.getOwner() instanceof Player player){
+                //If the player shot the arrow using a Super Bow in their main hand
+                //or their offhand
+                if (player.getMainHandItem().getItem() == ModItems.SUPER_BOW.get()
+                        || player.getOffhandItem().getItem() == ModItems.SUPER_BOW.get()){
+
+                    //change the base damage of the arrow
+                    //default is 2.0 (1 heart)
+                    arrow.setBaseDamage(5.0);
+                }
+            }
+        }
+    }
+
+    //Adds the brewing recipe for our custom potion
+    @SubscribeEvent
+    public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event){
+        PotionBrewing.Builder builder = event.getBuilder();
+
+        builder.addMix(Potions.AWKWARD, Items.HONEY_BLOCK, ModPotions.STICKY_POTION.getHolder().get());
     }
 }

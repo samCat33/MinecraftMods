@@ -54,6 +54,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_METEORITE.get());
         basicItem(ModItems.METEORITE_HORSE_ARMOR.get());
         basicItem(ModItems.BIG_S_SMITHING_TEMPLATE.get());
+        basicItem(ModItems.DUTTY_MUSIC_DISC.get());
+        basicItem(ModItems.SECOND_SONG_MUSIC_DISC.get());
+
+        basicItem(ModItems.RICE.get());
+        basicItem(ModItems.RICE_SEEDS.get());
 
         buttonItem(ModBlocks.SUSIE_BUTTON, ModBlocks.SUSIE_TNT);
         fenceItem(ModBlocks.SUSIE_FENCE, ModBlocks.SUSIE_TNT);

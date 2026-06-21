@@ -40,6 +40,11 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.BIG_S_SMITHING_TEMPLATE.get());
 
                                 output.accept(ModItems.SUPER_BOW.get());
+                                output.accept(ModItems.DUTTY_MUSIC_DISC.get());
+                                output.accept(ModItems.SECOND_SONG_MUSIC_DISC.get());
+
+                                output.accept(ModItems.RICE.get());
+                                output.accept(ModItems.RICE_SEEDS.get());
 
                             }).build());
 

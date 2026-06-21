@@ -3,9 +3,12 @@ package com.example.sammod.datagen;
 import com.example.sammod.SamMod;
 import com.example.sammod.block.ModBlocks;
 import com.example.sammod.block.blocks.LampBlock;
+import com.example.sammod.block.blocks.RiceCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -13,6 +16,8 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 //Look at BlockStateProvider
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -45,7 +50,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(ModBlocks.SUSIE_FENCE_GATE.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
         wallBlock(ModBlocks.SUSIE_WALL.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
 
-        doorBlockWithRenderType(ModBlocks.SUSIE_DOOR.get(), modLoc("block/susie_door_bottom"), modLoc("block/susie_door_top"), "cutout");
+        doorBlockWithRenderType(ModBlocks.SUSIE_DOOR.get(), modLoc("block/susie_door_bottom"),
+                modLoc("block/susie_door_top"), "cutout");
         trapdoorBlockWithRenderType(ModBlocks.SUSIE_TRAPDOOR.get(), modLoc("block/susie_trapdoor"), true, "cutout");
 
         blockItem(ModBlocks.SUSIE_STAIRS);
@@ -56,6 +62,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         customLamp();
+
+        makeCrop((CropBlock) ModBlocks.RICE_CROP.get(), "rice_crop_stage", "rice_crop_stage");
+    }
+
+    //This calls the "states" helper method below to make the block states
+    public void makeCrop(CropBlock block, String modelName, String textureName){
+
+        //A one-line java function is being defined here
+        //that takes in a block state and returns a configured model
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        //We build the block states using the defined function
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block,
+                                     String modelName, String textureName){
+        ConfiguredModel[] models = new ConfiguredModel[1];
+
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RiceCropBlock) block)
+                .getAgeProperty()), ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID,
+                "block/" + textureName + state.getValue(((RiceCropBlock) block).getAgeProperty())))
+                .renderType("cutout"));
+
+        return models;
     }
 
     private void customLamp(){

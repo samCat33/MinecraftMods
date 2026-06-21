@@ -1,11 +1,9 @@
 package com.example.sammod.block;
 
 import com.example.sammod.SamMod;
-import com.example.sammod.block.blocks.CatNoteBlock;
-import com.example.sammod.block.blocks.CoalConverter;
-import com.example.sammod.block.blocks.LampBlock;
-import com.example.sammod.block.blocks.SusieTNT;
+import com.example.sammod.block.blocks.*;
 import com.example.sammod.item.ModItems;
+import com.example.sammod.sound.MySillySounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,9 +23,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SamMod.MOD_ID);
 
-    public static final RegistryObject<Block> SUSIE_TNT = registerBlock("susie_tnt",
-            () -> new SusieTNT(BlockBehaviour.Properties.of().instabreak().strength(1.0F)));
-
     public static final RegistryObject<Block> CAT_NOTE_BLOCK = registerBlock("cat_note_block",
             () -> new CatNoteBlock(BlockBehaviour.Properties.of().instabreak().strength(1.0F)));
 
@@ -42,46 +37,49 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_METEORITE_BLOCK = registerBlock("raw_meteorite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(6f, 9).requiresCorrectToolForDrops()));
+                    .strength(6f, 9).requiresCorrectToolForDrops().sound(MySillySounds.METEORITE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> METEORITE_BLOCK = registerBlock("meteorite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
+                    .strength(3f).requiresCorrectToolForDrops().sound(MySillySounds.METEORITE_BLOCK_SOUNDS)));
+
+    public static final RegistryObject<Block> SUSIE_TNT = registerBlock("susie_tnt",
+            () -> new SusieTNT(BlockBehaviour.Properties.of().instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<StairBlock> SUSIE_STAIRS = registerBlock("susie_stairs",
     () -> new StairBlock(ModBlocks.SUSIE_TNT.get().defaultBlockState(), BlockBehaviour.Properties.of()
-            .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+            .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
     public static final RegistryObject<SlabBlock> SUSIE_SLAB = registerBlock("susie_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+                    .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<PressurePlateBlock> SUSIE_PRESSURE_PLATE = registerBlock("susie_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+                    .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
     public static final RegistryObject<ButtonBlock> SUSIE_BUTTON = registerBlock("susie_button",
             () -> new ButtonBlock(BlockSetType.IRON, 100, BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops().noCollission()));
+                    .instabreak().strength(1.0F).noCollission().sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<FenceBlock> SUSIE_FENCE = registerBlock("susie_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+                    .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
     public static final RegistryObject<FenceGateBlock> SUSIE_FENCE_GATE = registerBlock("susie_fence_gate",
             () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+                    .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
     public static final RegistryObject<WallBlock> SUSIE_WALL = registerBlock("susie_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+                    .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<DoorBlock> SUSIE_DOOR = registerBlock("susie_door",
             () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops().noCollission()));
+                    .instabreak().strength(1.0F).noCollission().sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
     public static final RegistryObject<TrapDoorBlock> SUSIE_TRAPDOOR = registerBlock("susie_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
-                    .instabreak().strength(1.0F).requiresCorrectToolForDrops()));
+                    .instabreak().strength(1.0F).sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> SUSIE_BLOCK = registerBlock("susie_block",
             () -> new Block(BlockBehaviour.Properties.of().instabreak().strength(1.0F)
-                    .requiresCorrectToolForDrops()));
+                    .sound(MySillySounds.SUSIE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CUSTOM_LAMP = registerBlock("custom_lamp",
             () -> new LampBlock(BlockBehaviour.Properties.of().strength(2f)
@@ -90,6 +88,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> COAL_CONVERTER = registerBlock("coal_converter",
             () -> new CoalConverter(BlockBehaviour.Properties.of().strength(2f)
                     .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RICE_CROP = BLOCKS.register("rice_crop",
+            () -> new RiceCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

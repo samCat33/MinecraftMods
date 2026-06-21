@@ -1,7 +1,9 @@
 package com.example.sammod.datagen;
 
 import com.example.sammod.block.ModBlocks;
+import com.example.sammod.block.blocks.RiceCropBlock;
 import com.example.sammod.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -15,6 +17,8 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -47,6 +51,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SUSIE_TRAPDOOR.get());
         dropSelf(ModBlocks.SUSIE_WALL.get());
 
+        //First parameter: the item drop
+        //Second parameter: special loot table for item
         this.add(ModBlocks.SUSIE_DOOR.get(),
                 createDoorTable(ModBlocks.SUSIE_DOOR.get()));
 
@@ -61,6 +67,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createMultipleOreDrops(ModBlocks.METEORITE_DEEPSLATE_ORE.get(),
                         ModItems.RAW_METEORITE.get(), 3, 6));
 
+
+        //Drop the rice crop when it is harvested at its maximum age
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.RICE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties()
+                        .hasProperty(RiceCropBlock.AGE, RiceCropBlock.MAX_AGE));
+
+        //First parameter is what to drop, second parameter is the loot table.
+        //The second parameter is a method with three additional parameters:
+        //  The crop to drop, what type of seed to drop, and the conditions for
+        //  dropping the crop, which are defined in the line above.
+        this.add(ModBlocks.RICE_CROP.get(), this.createCropDrops(ModBlocks.RICE_CROP.get(),
+                ModItems.RICE.get(), ModItems.RICE_SEEDS.get(), lootItemConditionBuilder));
 
     }
 

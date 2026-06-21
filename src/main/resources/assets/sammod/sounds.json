@@ -1,0 +1,64 @@
+{
+  "susie_block_hit": {
+    "subtitle": "sounds.sammod.susie_block_hit",
+    "sounds": [
+      "sammod:susie_meow_hit"
+    ]
+  },
+
+  "susie_block_place": {
+    "subtitle": "sounds.sammod.susie_block_place",
+    "sounds": [
+      "sammod:susie_meow_place"
+    ]
+  },
+
+
+  "susie_block_break": {
+    "subtitle": "sounds.sammod.susie_block_break",
+    "sounds": [
+      "sammod:susie_meow_break"
+    ]
+  },
+
+  "meteorite_place": {
+    "subtitle": "sounds.sammod.meteorite_place",
+    "sounds": [
+      "sammod:meteorite_place"
+    ]
+  },
+
+  "meteorite_hit": {
+    "subtitle": "sounds.sammod.meteorite_hit",
+    "sounds": [
+      "sammod:meteorite_hit"
+    ]
+  },
+
+  "meteorite_break": {
+    "subtitle": "sounds.sammod.meteorite_break",
+    "sounds": [
+      "sammod:meteorite_break"
+    ]
+  },
+
+  "dutty": {
+    "subtitle": "sounds.sammod.dutty",
+    "sounds": [
+      {
+        "name": "sammod:dutty",
+        "stream": true
+      }
+    ]
+  },
+
+  "second_song":{
+    "subtitle": "sounds.sammod.second_song",
+    "sounds": [
+      {
+        "name": "sammod:second_song",
+        "stream": true
+      }
+    ]
+  }
+}

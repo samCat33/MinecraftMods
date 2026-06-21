@@ -142,29 +142,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         //All the susie block variant recipes
-        stairBuilder(ModBlocks.SUSIE_STAIRS.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
-                .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+        stairBuilder(ModBlocks.SUSIE_STAIRS.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
+                .unlockedBy(getHasName(ModBlocks.SUSIE_BLOCK.get()), has(ModBlocks.SUSIE_BLOCK.get())).save(pRecipeOutput);
 
-        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUSIE_SLAB.get(), ModBlocks.SUSIE_TNT.get());
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUSIE_SLAB.get(), ModBlocks.SUSIE_BLOCK.get());
 
-        fenceBuilder(ModBlocks.SUSIE_FENCE.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
-                .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+        fenceBuilder(ModBlocks.SUSIE_FENCE.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
+                .unlockedBy(getHasName(ModBlocks.SUSIE_BLOCK.get()), has(ModBlocks.SUSIE_BLOCK.get())).save(pRecipeOutput);
 
-        pressurePlate(pRecipeOutput, ModBlocks.SUSIE_PRESSURE_PLATE.get(), ModBlocks.SUSIE_TNT.get());
+        pressurePlate(pRecipeOutput, ModBlocks.SUSIE_PRESSURE_PLATE.get(), ModBlocks.SUSIE_BLOCK.get());
 
-        fenceGateBuilder(ModBlocks.SUSIE_FENCE_GATE.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
-                .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.SUSIE_FENCE_GATE.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
+                .unlockedBy(getHasName(ModBlocks.SUSIE_BLOCK.get()), has(ModBlocks.SUSIE_BLOCK.get())).save(pRecipeOutput);
 
-        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUSIE_WALL.get(), ModBlocks.SUSIE_TNT.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUSIE_WALL.get(), ModBlocks.SUSIE_BLOCK.get());
 
-        doorBuilder(ModBlocks.SUSIE_DOOR.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
-                .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+        doorBuilder(ModBlocks.SUSIE_DOOR.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
+                .unlockedBy(getHasName(ModBlocks.SUSIE_BLOCK.get()), has(ModBlocks.SUSIE_BLOCK.get())).save(pRecipeOutput);
 
-        trapdoorBuilder(ModBlocks.SUSIE_TRAPDOOR.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
-                .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.SUSIE_TRAPDOOR.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
+                .unlockedBy(getHasName(ModBlocks.SUSIE_BLOCK.get()), has(ModBlocks.SUSIE_BLOCK.get())).save(pRecipeOutput);
 
-        buttonBuilder(ModBlocks.SUSIE_BUTTON.get(), Ingredient.of(ModBlocks.SUSIE_TNT.get())).group("susie")
-                .unlockedBy(getHasName(ModBlocks.SUSIE_TNT.get()), has(ModBlocks.SUSIE_TNT.get())).save(pRecipeOutput);
+        buttonBuilder(ModBlocks.SUSIE_BUTTON.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
+                .unlockedBy(getHasName(ModBlocks.SUSIE_BLOCK.get()), has(ModBlocks.SUSIE_BLOCK.get())).save(pRecipeOutput);
 
         trimSmithing(pRecipeOutput, ModItems.BIG_S_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "big_s"));
 

@@ -27,7 +27,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.METEORITE_BLOCK.get())
                 .add(ModBlocks.METEORITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.METEORITE_ORE.get())
-                .add(ModBlocks.RAW_METEORITE_BLOCK.get());
+                .add(ModBlocks.RAW_METEORITE_BLOCK.get())
+                .add(ModBlocks.SUSIE_BLOCK.get())
+                .add(ModBlocks.SUSIE_TNT.get())
+                .add(ModBlocks.SUSIE_BUTTON.get())
+                .add(ModBlocks.SUSIE_SLAB.get())
+                .add(ModBlocks.SUSIE_STAIRS.get())
+                .add(ModBlocks.SUSIE_WALL.get())
+                .add(ModBlocks.SUSIE_FENCE.get())
+                .add(ModBlocks.SUSIE_FENCE_GATE.get())
+                .add(ModBlocks.SUSIE_DOOR.get())
+                .add(ModBlocks.SUSIE_PRESSURE_PLATE.get())
+                .add(ModBlocks.SUSIE_TRAPDOOR.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.METEORITE_BLOCK.get())
@@ -54,5 +65,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_METEORITE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .remove(ModTags.Blocks.NEEDS_METEORITE_TOOL);
+
     }
 }

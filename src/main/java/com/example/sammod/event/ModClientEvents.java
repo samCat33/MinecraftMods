@@ -40,5 +40,7 @@ public class ModClientEvents {
             fovModifier *= 1f - deltaTicks * 0.3f;
             event.setNewFovModifier(fovModifier);
         }
+
+        //Otherwise if the player is using a Super Spyglass
     }
 }

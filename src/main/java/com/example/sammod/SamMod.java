@@ -2,11 +2,17 @@ package com.example.sammod;
 
 import com.example.sammod.block.ModBlocks;
 import com.example.sammod.component.ModDataComponentTypes;
+import com.example.sammod.effect.ModEffects;
+import com.example.sammod.enchantment.ModEnchantmentEffects;
+import com.example.sammod.enchantment.ModEnchantments;
 import com.example.sammod.item.ModCreativeModeTabs;
 import com.example.sammod.item.ModItems;
+import com.example.sammod.potion.ModPotions;
+import com.example.sammod.sound.MySillySounds;
 import com.example.sammod.util.ModItemProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -44,6 +50,10 @@ public class SamMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModDataComponentTypes.register(modEventBus);
+        MySillySounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,9 +62,11 @@ public class SamMod
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.RICE.get(), 0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModItems.RICE_SEEDS.get(), 0.1f);
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -64,6 +76,11 @@ public class SamMod
             event.accept(ModItems.CATNIP);
             event.accept(ModItems.RAW_METEORITE);
             event.accept(ModItems.METEORITE_INGOT);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept(ModItems.RICE_SEEDS.get());
+            event.accept(ModItems.RICE.get());
         }
 
         if (event.getTabKey() == CreativeModeTabs.COMBAT){

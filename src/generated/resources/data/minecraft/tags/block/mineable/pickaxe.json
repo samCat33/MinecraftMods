@@ -3,6 +3,17 @@
     "sammod:meteorite_block",
     "sammod:meteorite_deepslate_ore",
     "sammod:meteorite_ore",
-    "sammod:raw_meteorite_block"
+    "sammod:raw_meteorite_block",
+    "sammod:susie_block",
+    "sammod:susie_tnt",
+    "sammod:susie_button",
+    "sammod:susie_slab",
+    "sammod:susie_stairs",
+    "sammod:susie_wall",
+    "sammod:susie_fence",
+    "sammod:susie_fence_gate",
+    "sammod:susie_door",
+    "sammod:susie_pressure_plate",
+    "sammod:susie_trapdoor"
   ]
 }

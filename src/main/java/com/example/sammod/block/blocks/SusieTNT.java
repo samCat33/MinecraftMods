@@ -58,6 +58,9 @@ public class SusieTNT extends Block {
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
+    //For the sake of simplicity, the amount of damage done
+    //is always 200 regardless of how far away you are,
+    //as long as you are in range for the explosion to affect you.
     ExplosionDamageCalculator customCalculator = new ExplosionDamageCalculator() {
         @Override
         public float getEntityDamageAmount(Explosion explosion, Entity entity) {

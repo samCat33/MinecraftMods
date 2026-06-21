@@ -1,29 +1,22 @@
-[04Jun2026 14:36:14.276] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\Owner\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, sammod, --all, --output, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\generated\resources, --existing, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\main\resources]
-[04Jun2026 14:36:14.278] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.11+10-LTS
-[04Jun2026 14:36:14.279] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.11 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[04Jun2026 14:36:14.349] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[04Jun2026 14:36:14.419] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/Owner/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[04Jun2026 14:36:15.106] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[04Jun2026 14:36:15.715] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Owner\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, sammod, --all, --output, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\generated\resources, --existing, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\main\resources]
-[04Jun2026 14:36:19.344] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[04Jun2026 14:36:19.344] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[04Jun2026 14:36:19.362] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[04Jun2026 14:36:19.748] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [sammod]
-[04Jun2026 14:36:19.810] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Owner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[04Jun2026 14:36:19.810] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Owner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[04Jun2026 14:36:19.923] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[04Jun2026 14:36:20.029] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 105 ms
-[04Jun2026 14:36:20.029] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[04Jun2026 14:36:20.071] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 41 ms
-[04Jun2026 14:36:20.071] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id sammod
-[04Jun2026 14:36:20.106] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id sammod finished after 34 ms
-[04Jun2026 14:36:20.106] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id sammod
-[04Jun2026 14:36:20.110] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id sammod finished after 3 ms
-[04Jun2026 14:36:20.110] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: sammod
-[04Jun2026 14:36:20.167] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: sammod finished after 56 ms
-[04Jun2026 14:36:20.167] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: sammod
-[04Jun2026 14:36:20.275] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: sammod finished after 108 ms
-[04Jun2026 14:36:20.275] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[04Jun2026 14:36:20.296] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 20 ms
-[04Jun2026 14:36:20.296] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 374 ms
-[04Jun2026 14:36:20.303] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 222, old count: 222, new count: 223, removed stale: 0, written: 0
+[20Jun2026 19:32:27.667] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\Owner\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, sammod, --all, --output, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\generated\resources, --existing, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\main\resources]
+[20Jun2026 19:32:27.677] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[20Jun2026 19:32:27.678] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.11 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[20Jun2026 19:32:27.763] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[20Jun2026 19:32:27.842] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/Owner/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[20Jun2026 19:32:28.646] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[20Jun2026 19:32:29.314] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Owner\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, sammod, --all, --output, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\generated\resources, --existing, C:\Users\Owner\Documents\forge-1.21-51.0.33-mdk\src\main\resources]
+[20Jun2026 19:32:33.699] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[20Jun2026 19:32:33.699] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[20Jun2026 19:32:33.727] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[20Jun2026 19:32:34.186] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [sammod]
+[20Jun2026 19:32:34.246] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Owner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[20Jun2026 19:32:34.247] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Owner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[20Jun2026 19:32:34.384] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[20Jun2026 19:32:34.547] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 161 ms
+[20Jun2026 19:32:34.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[20Jun2026 19:32:34.608] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 59 ms
+[20Jun2026 19:32:34.608] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id sammod
+[20Jun2026 19:32:34.643] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id sammod finished after 35 ms
+[20Jun2026 19:32:34.644] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id sammod
+[20Jun2026 19:32:34.647] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id sammod finished after 3 ms
+[20Jun2026 19:32:34.647] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: sammod

@@ -18,8 +18,21 @@
 
   "item.sammod.super_bow": "Super Bow",
 
+  "item.sammod.dutty_music_disc": "Music Disc",
+  "item.sammod.dutty_music_disc.desc": "Dutty - Vibe Tracks",
+  "item.sammod.second_song_music_disc": "Music Disc",
+  "item.sammod.second_song_music_disc.desc": "Second Song - NewPigwurst",
+
+  "item.minecraft.potion.effect.sammod.sticky_potion": "Sticky Potion",
+  "item.minecraft.splash_potion.sammod.sticky_potion": "Sticky Splash Potion",
+  "item.minecraft.lingering_potion.sammod.sticky_potion": "Sticky Lingering Potion",
+
+  "item.sammod.rice_seeds": "Rice Seeds",
+  "item.sammod.rice": "Rice",
+
   "item.sammod.meteorite_horse_armor": "Meteorite Horse Armor",
   "item.sammod.big_s_armor_trim_smithing_template": "Big S Smithing Template",
+
   "trim_pattern.sammod.big_s": "Big S",
   "trim_material.sammod.meteorite_ingot": "Meteorite Material",
 
@@ -42,9 +55,13 @@
   "block.sammod.susie_trapdoor": "Susie Trapdoor",
   "block.sammod.susie_wall": "Susie Wall",
 
-
   "block.sammod.custom_lamp": "Custom Lamp",
   "block.sammod.coal_converter": "Coal Converter",
+
+  "block.sammod.rice_crop": "Rice Crop",
+
+  "enchantment.sammod.lightning": "Lightning",
+
 
   "creativetab.sammod.samitems": "Mod Items",
   "creativetab.sammod.samblocks": "Mod Blocks",
@@ -53,5 +70,11 @@
   "tooltip.sammod.susie_tnt.tooltip_no_shift": "§lWhy does it say this is TNT?§r",
   "tooltip.midas_touch1": "Use this on any block (or entity)",
   "tooltip.midas_touch2": "§eAnd all will turn to gold!§r",
-  "tooltip.sammod.coal_converter": "Throw §oStone§r or §oCobbled Deepslate§r on this to turn it into §o§lCoal!§r"
+  "tooltip.sammod.coal_converter": "Throw §oStone§r or §oCobbled Deepslate§r on this to turn it into §o§lCoal!§r",
+
+  "effect.sammod.wet": "§1Wet!§r",
+  "effect.sammod.sticky": "Sticky",
+
+  "painting.sammod.rainbow.title": "Rainbow",
+  "painting.sammod.rainbow.author": "NewPigwurst"
 }

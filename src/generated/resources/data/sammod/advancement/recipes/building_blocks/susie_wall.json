@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_susie_tnt": {
+    "has_susie_block": {
       "conditions": {
         "items": [
           {
-            "items": "sammod:susie_tnt"
+            "items": "sammod:susie_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_susie_tnt"
+      "has_susie_block"
     ]
   ],
   "rewards": {

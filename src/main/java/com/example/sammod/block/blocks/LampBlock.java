@@ -20,6 +20,8 @@ public class LampBlock extends Block {
         this.registerDefaultState(this.stateDefinition.any().setValue(LIGHT_LEVEL, 0));
     }
 
+    //This changes the light level of the block if it is interacted with
+    //while the player is not holding an item.
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
         if (!pLevel.isClientSide) {
