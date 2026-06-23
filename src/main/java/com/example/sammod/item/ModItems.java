@@ -121,12 +121,20 @@ public class ModItems {
 
     //Rice Seeds item
     //The translation is based on the item and not the block
-    public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_seed",
+    public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_seeds",
             () -> new ItemNameBlockItem(ModBlocks.RICE_CROP.get(), new Item.Properties()));
 
-    //Rice item
-    public static final RegistryObject<Item> RICE = ITEMS.register("rice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.CATNIP)));
+    //Uncooked Rice Item
+    public static final RegistryObject<Item> UNCOOKED_RICE_BAG = ITEMS.register("uncooked_rice_bag",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.UNCOOKED_RICE)));
+
+    //Cooked Rice Item
+    public static final RegistryObject<Item> COOKED_RICE_BAG = ITEMS.register("cooked_rice_bag",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_RICE)));
+
+    //Rose
+    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
+            () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),  new Item.Properties()));
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);

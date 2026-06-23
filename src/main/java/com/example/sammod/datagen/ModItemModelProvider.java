@@ -3,7 +3,6 @@ package com.example.sammod.datagen;
 import com.example.sammod.SamMod;
 import com.example.sammod.block.ModBlocks;
 import com.example.sammod.item.ModItems;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -17,7 +16,6 @@ import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -57,8 +55,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DUTTY_MUSIC_DISC.get());
         basicItem(ModItems.SECOND_SONG_MUSIC_DISC.get());
 
-        basicItem(ModItems.RICE.get());
+        basicItem(ModItems.UNCOOKED_RICE_BAG.get());
+        basicItem(ModItems.COOKED_RICE_BAG.get());
         basicItem(ModItems.RICE_SEEDS.get());
+        basicItem(ModItems.BLUEBERRIES.get());
 
         buttonItem(ModBlocks.SUSIE_BUTTON, ModBlocks.SUSIE_TNT);
         fenceItem(ModBlocks.SUSIE_FENCE, ModBlocks.SUSIE_TNT);

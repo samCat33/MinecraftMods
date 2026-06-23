@@ -1,0 +1,9 @@
+{
+  "asset_name": "meteorite_ingot",
+  "description": {
+    "color": "#7F03FC",
+    "translate": "trim_material.sammod.meteorite_ingot"
+  },
+  "ingredient": "sammod:meteorite_ingot",
+  "item_model_index": 1.0
+}

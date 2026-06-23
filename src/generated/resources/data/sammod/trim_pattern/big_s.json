@@ -1,0 +1,8 @@
+{
+  "asset_id": "sammod:big_s",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.sammod.big_s"
+  },
+  "template_item": "sammod:big_s_armor_trim_smithing_template"
+}

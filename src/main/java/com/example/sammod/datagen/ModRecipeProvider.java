@@ -33,6 +33,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 List.of(ModItems.RAW_METEORITE.get(), ModBlocks.METEORITE_ORE.get(),
                 ModBlocks.METEORITE_DEEPSLATE_ORE.get());
 
+        List <ItemLike> RICE =
+                List.of(ModItems.UNCOOKED_RICE_BAG.get());
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.METEORITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -137,9 +140,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_METEORITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_METEORITE_BLOCK.get()), has(ModBlocks.RAW_METEORITE_BLOCK.get())).save(pRecipeOutput);
 
-        oreSmelting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 3, 400, "meteorite");
-        oreBlasting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 3, 80, "meteorite");
-
+        oreSmelting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 5, 400, "meteorite");
+        oreBlasting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 5, 80, "meteorite");
+        foodSmoking(pRecipeOutput, RICE, RecipeCategory.FOOD, ModItems.COOKED_RICE_BAG.get(), 1, 100, "rice");
+        foodCooking(pRecipeOutput, RICE, RecipeCategory.FOOD, ModItems.COOKED_RICE_BAG.get(), 1, 200, "rice");
 
         //All the susie block variant recipes
         stairBuilder(ModBlocks.SUSIE_STAIRS.get(), Ingredient.of(ModBlocks.SUSIE_BLOCK.get())).group("susie")
@@ -180,6 +184,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup
     ) {
         oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
+    protected static void foodSmoking(
+            RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup
+    ){
+        oreCooking(pRecipeOutput, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smoking");
+    }
+
+    protected static void foodCooking(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup
+    ){
+        oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
     }
 
     private static <T extends AbstractCookingRecipe> void oreCooking(

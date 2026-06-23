@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "rice",
+  "ingredient": {
+    "item": "sammod:uncooked_rice_bag"
+  },
+  "result": {
+    "id": "sammod:cooked_rice_bag"
+  }
+}

@@ -2,14 +2,15 @@ package com.example.sammod.datagen;
 
 import com.example.sammod.SamMod;
 import com.example.sammod.block.ModBlocks;
+import com.example.sammod.block.blocks.BlueberryBushBlock;
 import com.example.sammod.block.blocks.LampBlock;
 import com.example.sammod.block.blocks.RiceCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -63,7 +64,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customLamp();
 
+        //This makes the rice crop
+        //The textures must be named rice_crop_stageX, where X is the age property from 0 up to MAX_AGE
         makeCrop((CropBlock) ModBlocks.RICE_CROP.get(), "rice_crop_stage", "rice_crop_stage");
+        makeBush((SweetBerryBushBlock) ModBlocks.BLUEBERRY_BUSH.get(), "blueberry_bush_stage", "blueberry_bush_stage");
+    }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName){
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName){
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlueberryBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "block/" + textureName +
+                        state.getValue(BlueberryBushBlock.AGE))).renderType("cutout"));
+
+        return models;
     }
 
     //This calls the "states" helper method below to make the block states
@@ -80,6 +99,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, CropBlock block,
                                      String modelName, String textureName){
         ConfiguredModel[] models = new ConfiguredModel[1];
+
+        //This creates a configured model with different textures
+        //depending on the age property of the crop
 
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RiceCropBlock) block)
                 .getAgeProperty()), ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID,

@@ -1,4 +1,5 @@
-// 1.21	2026-05-26T12:51:57.8435843	Loot Tables
+// 1.21	2026-06-22T22:12:25.735541	Loot Tables
+f7de5ba8f7319a2073227e946b7105de40956d45 data/sammod/loot_table/blocks/blueberry_bush.json
 20b1df9ea5ac3392d7df11c60bc2b01e850d2586 data/sammod/loot_table/blocks/cat_note_block.json
 2ecc837cd559215c139846b45ed917f7199f53d9 data/sammod/loot_table/blocks/coal_converter.json
 e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_lamp.json
@@ -6,6 +7,7 @@ e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_la
 4bb3bc6a6e22ed5121207ee942d5a70b67bc23fc data/sammod/loot_table/blocks/meteorite_deepslate_ore.json
 90018cc646d759d05f363282ddfd134055d96a93 data/sammod/loot_table/blocks/meteorite_ore.json
 fe319dd1a8b9f49521aff5b46bf71cb3411e3f78 data/sammod/loot_table/blocks/raw_meteorite_block.json
+67a5746af45367c15606d030240855abaec4212f data/sammod/loot_table/blocks/rice_crop.json
 c9c8d517fab9c363d601a0fd60303307364a2568 data/sammod/loot_table/blocks/susie_block.json
 2d5008821d4e2929f42e93237d240d2822d20509 data/sammod/loot_table/blocks/susie_button.json
 1164a562ca510708f45d41b57ffcc32121e4ea72 data/sammod/loot_table/blocks/susie_door.json

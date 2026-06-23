@@ -4,13 +4,11 @@ import com.example.sammod.block.ModBlocks;
 import com.example.sammod.component.ModDataComponentTypes;
 import com.example.sammod.effect.ModEffects;
 import com.example.sammod.enchantment.ModEnchantmentEffects;
-import com.example.sammod.enchantment.ModEnchantments;
 import com.example.sammod.item.ModCreativeModeTabs;
 import com.example.sammod.item.ModItems;
 import com.example.sammod.potion.ModPotions;
 import com.example.sammod.sound.MySillySounds;
 import com.example.sammod.util.ModItemProperties;
-import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,7 +23,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SamMod.MOD_ID)
@@ -64,7 +61,7 @@ public class SamMod
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(ModItems.RICE.get(), 0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModItems.UNCOOKED_RICE_BAG.get(), 0.3F);
             ComposterBlock.COMPOSTABLES.put(ModItems.RICE_SEEDS.get(), 0.1f);
         });
     }
@@ -80,7 +77,9 @@ public class SamMod
 
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModItems.RICE_SEEDS.get());
-            event.accept(ModItems.RICE.get());
+            event.accept(ModItems.UNCOOKED_RICE_BAG.get());
+            event.accept(ModItems.COOKED_RICE_BAG.get());
+            event.accept(ModItems.BLUEBERRIES.get());
         }
 
         if (event.getTabKey() == CreativeModeTabs.COMBAT){

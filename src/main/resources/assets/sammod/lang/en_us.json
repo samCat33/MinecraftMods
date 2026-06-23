@@ -28,7 +28,10 @@
   "item.minecraft.lingering_potion.sammod.sticky_potion": "Sticky Lingering Potion",
 
   "item.sammod.rice_seeds": "Rice Seeds",
-  "item.sammod.rice": "Rice",
+  "item.sammod.uncooked_rice": "Uncooked Rice",
+  "item.sammod.uncooked_rice_bag": "Bag of Uncooked Rice",
+  "item.sammod.cooked_rice_bag": "Bag of Cooked Rice",
+  "item.sammod.blueberries": "Blueberries",
 
   "item.sammod.meteorite_horse_armor": "Meteorite Horse Armor",
   "item.sammod.big_s_armor_trim_smithing_template": "Big S Smithing Template",
@@ -59,6 +62,7 @@
   "block.sammod.coal_converter": "Coal Converter",
 
   "block.sammod.rice_crop": "Rice Crop",
+  "block.sammod.blueberry_bush": "Blueberry Bush",
 
   "enchantment.sammod.lightning": "Lightning",
 

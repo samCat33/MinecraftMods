@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sammod:cooked_rice_bag_from_smelting_uncooked_rice_bag"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uncooked_rice_bag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sammod:uncooked_rice_bag"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_uncooked_rice_bag"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sammod:cooked_rice_bag_from_smelting_uncooked_rice_bag"
+    ]
+  }
+}

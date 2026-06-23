@@ -16,7 +16,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.rmi.registry.Registry;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -91,6 +90,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RICE_CROP = BLOCKS.register("rice_crop",
             () -> new RiceCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush",
+
+            //We are only able to do a full copy of a sweet berry bush
+            //because we have not changed the AGE property of SweetBerryBush
+            () -> new BlueberryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

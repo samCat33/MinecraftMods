@@ -43,8 +43,11 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.DUTTY_MUSIC_DISC.get());
                                 output.accept(ModItems.SECOND_SONG_MUSIC_DISC.get());
 
-                                output.accept(ModItems.RICE.get());
+                                output.accept(ModItems.UNCOOKED_RICE_BAG.get());
+                                output.accept(ModItems.COOKED_RICE_BAG.get());
                                 output.accept(ModItems.RICE_SEEDS.get());
+
+                                output.accept(ModItems.BLUEBERRIES.get());
 
                             }).build());
 

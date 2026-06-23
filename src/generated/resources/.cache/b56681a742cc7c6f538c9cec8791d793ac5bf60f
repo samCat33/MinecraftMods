@@ -1,6 +1,8 @@
-// 1.21	2026-06-16T21:55:49.3776668	Item Models: sammod
+// 1.21	2026-06-22T22:12:25.7385412	Item Models: sammod
 a395821eff1dc5a0f79d15f83d27ae27a09c0d47 assets/sammod/models/item/big_s_armor_trim_smithing_template.json
+4ab5288a422558a6446d62089905b432b5533762 assets/sammod/models/item/blueberries.json
 01d2585e2c8147d62efd8b03ae078f6cf6963f22 assets/sammod/models/item/catnip.json
+27b9e9c061788d7336cfe0658bfe431cd4203fba assets/sammod/models/item/cooked_rice_bag.json
 e37eae8d5a4728f309e042733854a1460253a79f assets/sammod/models/item/dutty_music_disc.json
 d47e3fdb53e0065da8c37c5ac07657c40e233dbe assets/sammod/models/item/meteorite_axe.json
 ab0f32d870eff6176e95ace9621619d21da46148 assets/sammod/models/item/meteorite_boots.json
@@ -55,8 +57,10 @@ ade2286f20e6265fd00435a0a07648e0cdfadb71 assets/sammod/models/item/meteorite_leg
 5f05c1bc17ede9f254387a862fb894592d186948 assets/sammod/models/item/meteorite_shovel.json
 4eb90975cec6640d2d9649007d9b08e7fa8be908 assets/sammod/models/item/meteorite_sword.json
 915afa56bb0eddfecf51adf15b69f7c7b24f2571 assets/sammod/models/item/raw_meteorite.json
+2ba48ad0b0b3672ef612c6ae36c05bc8bf6fe218 assets/sammod/models/item/rice_seeds.json
 b0aa638b05080d1aeee343ddadaaeab31fc284fc assets/sammod/models/item/second_song_music_disc.json
 2b218ca51cdb9e2f31fab954bf6071269b21ed1d assets/sammod/models/item/susie_button.json
 0c1c49be56b566dc1980e319b55755b317e56cad assets/sammod/models/item/susie_door.json
 dbbab8b441e67af1e5435136488ec184fe432ead assets/sammod/models/item/susie_fence.json
 93cc63085e3b1848be50a8f1e3a7c4b00a831af5 assets/sammod/models/item/susie_wall.json
+1479365047e47f706661fd26c37f0c0a3e147231 assets/sammod/models/item/uncooked_rice_bag.json
