@@ -37,6 +37,8 @@ public class MySillySounds {
     public static final ResourceKey<JukeboxSong> SECOND_SONG_KEY = ResourceKey.create(Registries.JUKEBOX_SONG,
             ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "second_song"));
 
+
+    //Forge sound types are as follows (break, step, place, hit, fall)
     public static final ForgeSoundType METEORITE_BLOCK_SOUNDS = new ForgeSoundType(2f, 1f,
             MySillySounds.METEORITE_BREAK, MySillySounds.METEORITE_PLACE, MySillySounds.METEORITE_PLACE,
             MySillySounds.METEORITE_HIT, MySillySounds.METEORITE_HIT);
