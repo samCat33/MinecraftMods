@@ -1,5 +1,6 @@
-// 1.21	2026-06-22T22:12:25.7375415	Block States: sammod
+// 1.21	2026-06-26T16:27:55.1132582	Block States: sammod
 8cdbfe8ae46484a1a32c543a0800d4897f42f856 assets/sammod/blockstates/blueberry_bush.json
+363831fb8e1d6e5346b13c5f9623fe85646b3530 assets/sammod/blockstates/blue_opal_ore.json
 f00fb1627ac7e219d41b5bbcd4dc6a876f3d1904 assets/sammod/blockstates/cat_note_block.json
 8c6fb3bfdf63029a258c515187bf7b5223f61159 assets/sammod/blockstates/coal_converter.json
 af9149e6bc4fe80273224f3fc17a19705008a3ca assets/sammod/blockstates/custom_lamp.json
@@ -23,6 +24,7 @@ fb47174445eac4fd91e8aa4f11702729012b3c57 assets/sammod/blockstates/susie_trapdoo
 6a8dc7b55b81b74a5a032df56dabc109c5e2141b assets/sammod/models/block/blueberry_bush_stage1.json
 8b3e9e47a72a8c705d9fba451fdcc8e154303615 assets/sammod/models/block/blueberry_bush_stage2.json
 ae767fdf74f146648446d43584683122b0cdbc6f assets/sammod/models/block/blueberry_bush_stage3.json
+821bb372124d990201eeeb61823ea0248f63fa13 assets/sammod/models/block/blue_opal_ore.json
 2c7a91d1134d33f2656573a5091c51210e057581 assets/sammod/models/block/cat_note_block.json
 071b6e99700b14be786120d566c311b0f960c84f assets/sammod/models/block/coal_converter.json
 37793315be19c3e008e58b48f6dc4940f1e0ae88 assets/sammod/models/block/custom_lamp_off.json
@@ -67,6 +69,7 @@ b0cfba267a5f194a4defeffc83cb3e5233376a7f assets/sammod/models/block/susie_stairs
 0730e79812b5b3de5babce5d24f47213a7b49626 assets/sammod/models/block/susie_wall_post.json
 28d9ff52b8410d1858a116987d9fc9dd77ce2450 assets/sammod/models/block/susie_wall_side.json
 6f698da9a3f244517872365098f34eefb53b211e assets/sammod/models/block/susie_wall_side_tall.json
+57d72828e15332921d76779bfcd9af6de3226673 assets/sammod/models/item/blue_opal_ore.json
 5f39dbb7f75ac2fd756459882e2bb8850acaa703 assets/sammod/models/item/cat_note_block.json
 274fcfe4f28d15a4ad4e2378da4424e5d40f3076 assets/sammod/models/item/coal_converter.json
 7e0224d9dfb5814a704b81520ab4adf6b2881f49 assets/sammod/models/item/custom_lamp.json

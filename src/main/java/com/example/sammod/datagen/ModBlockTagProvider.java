@@ -2,11 +2,8 @@ package com.example.sammod.datagen;
 
 import com.example.sammod.SamMod;
 import com.example.sammod.block.ModBlocks;
-import com.example.sammod.item.ModItems;
 import com.example.sammod.util.ModTags;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.BlockTagsProvider;
@@ -38,7 +35,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SUSIE_FENCE_GATE.get())
                 .add(ModBlocks.SUSIE_DOOR.get())
                 .add(ModBlocks.SUSIE_PRESSURE_PLATE.get())
-                .add(ModBlocks.SUSIE_TRAPDOOR.get());
+                .add(ModBlocks.SUSIE_TRAPDOOR.get())
+
+                .add(ModBlocks.BLUE_OPAL_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.METEORITE_BLOCK.get())
@@ -60,6 +59,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.METEORITE_ORE.get())
                 .add(ModBlocks.METEORITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.RAW_METEORITE_BLOCK.get())
+
+                //This is necessary because I want black opal
+                //to only be obtainable through meteorite gear
+                .add(ModBlocks.BLUE_OPAL_ORE.get())
+
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(ModTags.Blocks.INCORRECT_FOR_METEORITE_TOOL)

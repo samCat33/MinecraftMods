@@ -1,0 +1,8 @@
+ModConfiguredFeatures.java -> How certain blocks are placed (such as ores being but in a vein of a certain shape)
+
+ModPlacedFeatures.java -> The details of how these blocks are placed in certain chunks (such as y-level, how many veins or sets
+    of blocks per chunk)
+
+    This requires ModOrePlacement.java, which uses three methods copied from the source code of OrePlacements.java
+
+ModBiomeFeatures.java -> Where these blocks are going to be placed (what biomes)

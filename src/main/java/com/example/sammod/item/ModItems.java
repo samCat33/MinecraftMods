@@ -136,6 +136,15 @@ public class ModItems {
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),  new Item.Properties()));
 
+    //Black Opal Shard -> used to make Black Opal Ingot
+    public static final RegistryObject<Item> BLUE_OPAL_SHARD = ITEMS.register("blue_opal_shard",
+            () -> new Item(new Item.Properties()));
+
+    //Black Opal Ingot
+    public static final RegistryObject<Item> BLUE_OPAL_INGOT = ITEMS.register("blue_opal_ingot",
+            ()  -> new Item(new Item.Properties()));
+
+
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
     }

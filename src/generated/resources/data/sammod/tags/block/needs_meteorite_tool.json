@@ -4,6 +4,7 @@
     "sammod:meteorite_ore",
     "sammod:meteorite_deepslate_ore",
     "sammod:raw_meteorite_block",
+    "sammod:blue_opal_ore",
     "#minecraft:needs_diamond_tool"
   ]
 }

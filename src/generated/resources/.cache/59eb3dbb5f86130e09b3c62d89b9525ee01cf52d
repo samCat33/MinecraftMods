@@ -1,5 +1,6 @@
-// 1.21	2026-06-22T22:12:25.735541	Loot Tables
+// 1.21	2026-06-26T16:27:55.1107586	Loot Tables
 f7de5ba8f7319a2073227e946b7105de40956d45 data/sammod/loot_table/blocks/blueberry_bush.json
+9ac697279eb5c7237a014c5029bae8c6ac06ec44 data/sammod/loot_table/blocks/blue_opal_ore.json
 20b1df9ea5ac3392d7df11c60bc2b01e850d2586 data/sammod/loot_table/blocks/cat_note_block.json
 2ecc837cd559215c139846b45ed917f7199f53d9 data/sammod/loot_table/blocks/coal_converter.json
 e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_lamp.json

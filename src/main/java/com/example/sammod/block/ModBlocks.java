@@ -22,21 +22,24 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SamMod.MOD_ID);
 
+    //Deepslate diamond ore has a hardness of 4.5f
+    //Deepslate blocks have a blast resistance of 3
+
     public static final RegistryObject<Block> CAT_NOTE_BLOCK = registerBlock("cat_note_block",
             () -> new CatNoteBlock(BlockBehaviour.Properties.of().instabreak().strength(1.0F)));
 
     public static final RegistryObject<Block> METEORITE_ORE = registerBlock("meteorite_ore",
             () -> new DropExperienceBlock(UniformInt.of(7, 10), BlockBehaviour.Properties.of()
-                    .strength(6f, 9).requiresCorrectToolForDrops()));
+                    .strength(5f, 9).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> METEORITE_DEEPSLATE_ORE = registerBlock("meteorite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(8, 12), BlockBehaviour.Properties.of()
-                    .strength(6.5f, 9).requiresCorrectToolForDrops()
+                    .strength(5.5f, 9).requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> RAW_METEORITE_BLOCK = registerBlock("raw_meteorite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(6f, 9).requiresCorrectToolForDrops().sound(MySillySounds.METEORITE_BLOCK_SOUNDS)));
+                    .strength(5f, 9).requiresCorrectToolForDrops().sound(MySillySounds.METEORITE_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> METEORITE_BLOCK = registerBlock("meteorite_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -96,6 +99,11 @@ public class ModBlocks {
             //We are only able to do a full copy of a sweet berry bush
             //because we have not changed the AGE property of SweetBerryBush
             () -> new BlueberryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final RegistryObject<Block> BLUE_OPAL_ORE = BLOCKS.register("blue_opal_ore",
+            () -> new DropExperienceBlock(UniformInt.of(8, 12), BlockBehaviour.Properties.of()
+                    .strength(8f, 12).requiresCorrectToolForDrops()
+                    .sound(SoundType.DEEPSLATE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

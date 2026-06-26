@@ -1,6 +1,8 @@
-// 1.21	2026-06-22T22:12:25.7385412	Item Models: sammod
+// 1.21	2026-06-26T16:27:55.1142578	Item Models: sammod
 a395821eff1dc5a0f79d15f83d27ae27a09c0d47 assets/sammod/models/item/big_s_armor_trim_smithing_template.json
 4ab5288a422558a6446d62089905b432b5533762 assets/sammod/models/item/blueberries.json
+f05e20846145ed8245a255615401690846a3ccde assets/sammod/models/item/blue_opal_ingot.json
+5e2bf6a27ee62b2c3cc021d3db2906bf5dde984c assets/sammod/models/item/blue_opal_shard.json
 01d2585e2c8147d62efd8b03ae078f6cf6963f22 assets/sammod/models/item/catnip.json
 27b9e9c061788d7336cfe0658bfe431cd4203fba assets/sammod/models/item/cooked_rice_bag.json
 e37eae8d5a4728f309e042733854a1460253a79f assets/sammod/models/item/dutty_music_disc.json

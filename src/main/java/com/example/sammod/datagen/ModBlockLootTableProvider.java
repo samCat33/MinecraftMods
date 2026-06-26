@@ -69,6 +69,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createMultipleOreDrops(ModBlocks.METEORITE_DEEPSLATE_ORE.get(),
                         ModItems.RAW_METEORITE.get(), 3, 6));
 
+        this.add(ModBlocks.BLUE_OPAL_ORE.get(),
+                createMultipleOreDrops(ModBlocks.BLUE_OPAL_ORE.get(),
+                        ModItems.BLUE_OPAL_SHARD.get(), 1, 1));
+
 
         //Drop the rice crop when it is harvested at its maximum age
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition

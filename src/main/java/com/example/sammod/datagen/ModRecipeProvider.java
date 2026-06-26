@@ -140,6 +140,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_METEORITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_METEORITE_BLOCK.get()), has(ModBlocks.RAW_METEORITE_BLOCK.get())).save(pRecipeOutput);
 
+
+        //These are all the furnace recipes
         oreSmelting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 5, 400, "meteorite");
         oreBlasting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 5, 80, "meteorite");
         foodSmoking(pRecipeOutput, RICE, RecipeCategory.FOOD, ModItems.COOKED_RICE_BAG.get(), 1, 100, "rice");

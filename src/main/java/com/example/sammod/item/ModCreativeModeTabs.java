@@ -49,6 +49,9 @@ public class ModCreativeModeTabs {
 
                                 output.accept(ModItems.BLUEBERRIES.get());
 
+                                output.accept(ModItems.BLUE_OPAL_SHARD.get());
+                                output.accept(ModItems.BLUE_OPAL_INGOT.get());
+
                             }).build());
 
     public static final RegistryObject<CreativeModeTab> SAMMODBLOCKS =
@@ -80,6 +83,8 @@ public class ModCreativeModeTabs {
 
                                 output.accept(ModBlocks.CUSTOM_LAMP.get());
                                 output.accept(ModBlocks.COAL_CONVERTER.get());
+
+                                output.accept(ModBlocks.BLUE_OPAL_ORE.get());
                             }).build());
 
     public static void register(IEventBus bus) {

@@ -50,6 +50,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CATNIP.get());
         basicItem(ModItems.METEORITE_INGOT.get());
         basicItem(ModItems.RAW_METEORITE.get());
+        basicItem(ModItems.BLUE_OPAL_SHARD.get());
+        basicItem(ModItems.BLUE_OPAL_INGOT.get());
         basicItem(ModItems.METEORITE_HORSE_ARMOR.get());
         basicItem(ModItems.BIG_S_SMITHING_TEMPLATE.get());
         basicItem(ModItems.DUTTY_MUSIC_DISC.get());

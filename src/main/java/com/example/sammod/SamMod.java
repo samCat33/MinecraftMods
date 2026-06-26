@@ -73,6 +73,9 @@ public class SamMod
             event.accept(ModItems.CATNIP);
             event.accept(ModItems.RAW_METEORITE);
             event.accept(ModItems.METEORITE_INGOT);
+
+            event.accept(ModItems.BLUE_OPAL_SHARD);
+            event.accept(ModItems.BLUE_OPAL_INGOT);
         }
 
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
@@ -123,6 +126,8 @@ public class SamMod
             event.accept(ModBlocks.SUSIE_STAIRS.get());
             event.accept(ModBlocks.SUSIE_TRAPDOOR.get());
             event.accept(ModBlocks.SUSIE_WALL.get());
+
+            event.accept(ModBlocks.BLUE_OPAL_ORE.get());
         }
     }
 

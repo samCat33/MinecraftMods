@@ -40,6 +40,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAW_METEORITE_BLOCK);
         blockWithItem(ModBlocks.COAL_CONVERTER);
 
+        blockWithItem(ModBlocks.BLUE_OPAL_ORE);
+
         stairsBlock(ModBlocks.SUSIE_STAIRS.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
         slabBlock(ModBlocks.SUSIE_SLAB.get(), blockTexture(ModBlocks.SUSIE_TNT.get()), blockTexture(ModBlocks.SUSIE_TNT.get()));
 
