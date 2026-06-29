@@ -1,10 +1,12 @@
-// 1.21	2026-06-26T16:27:55.1122519	Registries
+// 1.21	2026-06-28T19:11:20.2092849	Registries
 3723776988785e5ccce6f68e42560fb4a4b95e3b data/sammod/enchantment/lightning.json
 07598ddf401a809f69199a2fd431e9c5579aec83 data/sammod/forge/biome_modifier/add_blue_opal_ore.json
 6de7f23330168e54cae31064dd301d306a5b451c data/sammod/forge/biome_modifier/add_meteorite_ore.json
 323592a8718a443f1a08fcd56af63c6386fa07fa data/sammod/trim_material/meteorite_ingot.json
 f1075065a75d2207efde7ad07d891fbe5942a228 data/sammod/trim_pattern/big_s.json
 064ac0bb768149a747bdbf62a67bd1a125af219c data/sammod/worldgen/configured_feature/blue_opal_ore.json
+dea241ffa5e9380b68aaac56bf925b67e8e24813 data/sammod/worldgen/configured_feature/mega_redwood.json
 7c7e4f61462b9393f8472f68054861f49c54fbce data/sammod/worldgen/configured_feature/meteorite_ore.json
+dd9d7e9fbf25ee9d7b97a0d9e4e907876b9db01d data/sammod/worldgen/configured_feature/redwood.json
 24d95e231b701e4fb590d2e1e65dab766b26ab34 data/sammod/worldgen/placed_feature/blue_opal_ore_placed.json
 728e8e15bbdcc76325338f2ee326d56fc6fd14f9 data/sammod/worldgen/placed_feature/meteorite_ore_placed.json

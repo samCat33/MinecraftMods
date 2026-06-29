@@ -128,6 +128,14 @@ public class SamMod
             event.accept(ModBlocks.SUSIE_WALL.get());
 
             event.accept(ModBlocks.BLUE_OPAL_ORE.get());
+
+            event.accept(ModBlocks.REDWOOD_LOG.get());
+            event.accept(ModBlocks.REDWOOD_WOOD.get());
+            event.accept(ModBlocks.STRIPPED_REDWOOD_LOG.get());
+            event.accept(ModBlocks.STRIPPED_REDWOOD_WOOD.get());
+            event.accept(ModBlocks.REDWOOD_PLANKS.get());
+            event.accept(ModBlocks.REDWOOD_LEAVES.get());
+            event.accept(ModBlocks.REDWOOD_SAPLING.get());
         }
     }
 

@@ -79,7 +79,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.METEORITE_CHESTPLATE);
         trimmedArmorItem(ModItems.METEORITE_LEGGINGS);
         trimmedArmorItem(ModItems.METEORITE_BOOTS);
+
+        saplingItem(ModBlocks.REDWOOD_SAPLING);
     }
+
+    //We need a custom method for our sapling item because it is registered under block
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item){
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "block/" + item.getId().getPath()));
+    }
+
 
     //Documentation according to El_Redstoniano, who made this
 

@@ -1,6 +1,6 @@
-// 1.21	2026-06-26T16:27:55.1107586	Loot Tables
+// 1.21	2026-06-28T18:42:44.3041677	Loot Tables
 f7de5ba8f7319a2073227e946b7105de40956d45 data/sammod/loot_table/blocks/blueberry_bush.json
-9ac697279eb5c7237a014c5029bae8c6ac06ec44 data/sammod/loot_table/blocks/blue_opal_ore.json
+b6a17db26bf8c24f47f1fc81b68cd7022ec8f7e2 data/sammod/loot_table/blocks/blue_opal_ore.json
 20b1df9ea5ac3392d7df11c60bc2b01e850d2586 data/sammod/loot_table/blocks/cat_note_block.json
 2ecc837cd559215c139846b45ed917f7199f53d9 data/sammod/loot_table/blocks/coal_converter.json
 e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_lamp.json
@@ -8,7 +8,14 @@ e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_la
 4bb3bc6a6e22ed5121207ee942d5a70b67bc23fc data/sammod/loot_table/blocks/meteorite_deepslate_ore.json
 90018cc646d759d05f363282ddfd134055d96a93 data/sammod/loot_table/blocks/meteorite_ore.json
 fe319dd1a8b9f49521aff5b46bf71cb3411e3f78 data/sammod/loot_table/blocks/raw_meteorite_block.json
+7f999cecc08cf1f020b6cef2d2f952216924ce09 data/sammod/loot_table/blocks/redwood_leaves.json
+d093665daf590019c6d985c797ee4841bcf5f010 data/sammod/loot_table/blocks/redwood_log.json
+92ecdaa6fd71440c1977c99e4d7ca0548465fb96 data/sammod/loot_table/blocks/redwood_planks.json
+89cac5f052584c826ece974a8d1a563870ec6ea6 data/sammod/loot_table/blocks/redwood_sapling.json
+06bbf1e79fa13c724e3025e2d9867121b3eefbd9 data/sammod/loot_table/blocks/redwood_wood.json
 67a5746af45367c15606d030240855abaec4212f data/sammod/loot_table/blocks/rice_crop.json
+2c27a458bb75ad2d00a2929ead2ba8f67d29febc data/sammod/loot_table/blocks/stripped_redwood_log.json
+12791c0a17c8be86a0bcbd361ce62adb6fc8aaa8 data/sammod/loot_table/blocks/stripped_redwood_wood.json
 c9c8d517fab9c363d601a0fd60303307364a2568 data/sammod/loot_table/blocks/susie_block.json
 2d5008821d4e2929f42e93237d240d2822d20509 data/sammod/loot_table/blocks/susie_button.json
 1164a562ca510708f45d41b57ffcc32121e4ea72 data/sammod/loot_table/blocks/susie_door.json

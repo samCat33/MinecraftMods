@@ -40,5 +40,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.BIG_S_SMITHING_TEMPLATE.get());
 
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.REDWOOD_LOG.get().asItem())
+                .add(ModBlocks.REDWOOD_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_REDWOOD_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_REDWOOD_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.REDWOOD_PLANKS.get().asItem());
     }
 }

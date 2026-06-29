@@ -85,6 +85,14 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.COAL_CONVERTER.get());
 
                                 output.accept(ModBlocks.BLUE_OPAL_ORE.get());
+
+                                output.accept(ModBlocks.REDWOOD_LOG.get());
+                                output.accept(ModBlocks.REDWOOD_WOOD.get());
+                                output.accept(ModBlocks.STRIPPED_REDWOOD_LOG.get());
+                                output.accept(ModBlocks.STRIPPED_REDWOOD_WOOD.get());
+                                output.accept(ModBlocks.REDWOOD_PLANKS.get());
+                                output.accept(ModBlocks.REDWOOD_LEAVES.get());
+                                output.accept(ModBlocks.REDWOOD_SAPLING.get());
                             }).build());
 
     public static void register(IEventBus bus) {

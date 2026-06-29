@@ -70,5 +70,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .remove(ModTags.Blocks.NEEDS_METEORITE_TOOL);
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.REDWOOD_LOG.get())
+                .add(ModBlocks.REDWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_REDWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_REDWOOD_WOOD.get());
     }
 }

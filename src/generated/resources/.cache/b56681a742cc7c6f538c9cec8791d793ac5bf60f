@@ -1,4 +1,4 @@
-// 1.21	2026-06-26T16:27:55.1142578	Item Models: sammod
+// 1.21	2026-06-28T18:42:44.3071783	Item Models: sammod
 a395821eff1dc5a0f79d15f83d27ae27a09c0d47 assets/sammod/models/item/big_s_armor_trim_smithing_template.json
 4ab5288a422558a6446d62089905b432b5533762 assets/sammod/models/item/blueberries.json
 f05e20846145ed8245a255615401690846a3ccde assets/sammod/models/item/blue_opal_ingot.json
@@ -59,6 +59,7 @@ ade2286f20e6265fd00435a0a07648e0cdfadb71 assets/sammod/models/item/meteorite_leg
 5f05c1bc17ede9f254387a862fb894592d186948 assets/sammod/models/item/meteorite_shovel.json
 4eb90975cec6640d2d9649007d9b08e7fa8be908 assets/sammod/models/item/meteorite_sword.json
 915afa56bb0eddfecf51adf15b69f7c7b24f2571 assets/sammod/models/item/raw_meteorite.json
+1e22e56483b94c89842b3903bdccee53939ed2dd assets/sammod/models/item/redwood_sapling.json
 2ba48ad0b0b3672ef612c6ae36c05bc8bf6fe218 assets/sammod/models/item/rice_seeds.json
 b0aa638b05080d1aeee343ddadaaeab31fc284fc assets/sammod/models/item/second_song_music_disc.json
 2b218ca51cdb9e2f31fab954bf6071269b21ed1d assets/sammod/models/item/susie_button.json

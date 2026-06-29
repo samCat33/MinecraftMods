@@ -63,13 +63,49 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SUSIE_FENCE_GATE);
         blockItem(ModBlocks.SUSIE_TRAPDOOR, "_bottom");
 
-
         customLamp();
 
         //This makes the rice crop
         //The textures must be named rice_crop_stageX, where X is the age property from 0 up to MAX_AGE
         makeCrop((CropBlock) ModBlocks.RICE_CROP.get(), "rice_crop_stage", "rice_crop_stage");
         makeBush((SweetBerryBushBlock) ModBlocks.BLUEBERRY_BUSH.get(), "blueberry_bush_stage", "blueberry_bush_stage");
+
+        logBlock(ModBlocks.REDWOOD_LOG.get());
+        axisBlock(ModBlocks.REDWOOD_WOOD.get(), blockTexture(ModBlocks.REDWOOD_LOG.get()),
+                blockTexture(ModBlocks.REDWOOD_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_REDWOOD_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_REDWOOD_WOOD.get(),
+                blockTexture(ModBlocks.STRIPPED_REDWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_REDWOOD_LOG.get()));
+
+        blockItem(ModBlocks.REDWOOD_LOG);
+        blockItem(ModBlocks.REDWOOD_WOOD);
+        blockItem(ModBlocks.STRIPPED_REDWOOD_LOG);
+        blockItem(ModBlocks.STRIPPED_REDWOOD_WOOD);
+
+        blockWithItem(ModBlocks.REDWOOD_PLANKS);
+
+        leavesBlock(ModBlocks.REDWOOD_LEAVES);
+        saplingBlock(ModBlocks.REDWOOD_SAPLING);
+
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject){
+        //simpleBlock(block, model)
+        simpleBlock(blockRegistryObject.get(),
+
+                //model argument is models().cross(name, ResourceLocation cross)
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())
+                        .getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject){
+        //simpleBlockWithItem(block, model)
+        simpleBlockWithItem(blockRegistryObject.get(),
+                //model argument is models().singleTexture(name, parent, textureKey, texture)
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())
+                        .getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName){

@@ -61,6 +61,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.SUSIE_SLAB.get(),
                 createSlabItemTable(ModBlocks.SUSIE_SLAB.get()));
 
+
+        //The ores
         this.add(ModBlocks.METEORITE_ORE.get(),
                 createMultipleOreDrops(ModBlocks.METEORITE_ORE.get(),
                         ModItems.RAW_METEORITE.get(), 2, 5));
@@ -72,6 +74,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BLUE_OPAL_ORE.get(),
                 createMultipleOreDrops(ModBlocks.BLUE_OPAL_ORE.get(),
                         ModItems.BLUE_OPAL_SHARD.get(), 1, 1));
+
+
+        //The tree
+        dropSelf(ModBlocks.REDWOOD_LOG.get());
+        dropSelf(ModBlocks.REDWOOD_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_REDWOOD_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_REDWOOD_WOOD.get());
+        dropSelf(ModBlocks.REDWOOD_PLANKS.get());
+        dropSelf(ModBlocks.REDWOOD_SAPLING.get());
+
+        this.add(ModBlocks.REDWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.REDWOOD_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
 
         //Drop the rice crop when it is harvested at its maximum age

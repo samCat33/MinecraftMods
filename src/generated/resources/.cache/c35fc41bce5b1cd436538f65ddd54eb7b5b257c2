@@ -1,4 +1,6 @@
-// 1.21	2026-06-03T17:50:20.5978958	Tags for minecraft:item mod id sammod
+// 1.21	2026-06-28T18:42:44.3031681	Tags for minecraft:item mod id sammod
+bfa097350364b4bff5371b8489e2b56468eed81e data/minecraft/tags/item/logs_that_burn.json
+9a432f6cf92fc87c9fbbbe9e079b17f7bf65b1ba data/minecraft/tags/item/planks.json
 14b513c6f2f6ce35c6bfde9c07eb7e390c48e75e data/minecraft/tags/item/trimmable_armor.json
 8fdfa27ca90b15f480b065a5947120ebd887440a data/minecraft/tags/item/trim_materials.json
 c5a2f4637a1bbbc50bb339749f9bcb75354eb5b4 data/minecraft/tags/item/trim_templates.json

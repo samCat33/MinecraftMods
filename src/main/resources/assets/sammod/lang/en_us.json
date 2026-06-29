@@ -36,6 +36,9 @@
   "item.sammod.meteorite_horse_armor": "Meteorite Horse Armor",
   "item.sammod.big_s_armor_trim_smithing_template": "Big S Smithing Template",
 
+  "item.sammod.blue_opal_shard": "Blue Opal Shard",
+  "item.sammod.blue_opal_ingot": "Blue Opal Ingot",
+
   "trim_pattern.sammod.big_s": "Big S",
   "trim_material.sammod.meteorite_ingot": "Meteorite Material",
 
@@ -63,6 +66,15 @@
 
   "block.sammod.rice_crop": "Rice Crop",
   "block.sammod.blueberry_bush": "Blueberry Bush",
+  "block.sammod.blue_opal_ore": "Blue Opal Ore",
+
+  "block.sammod.redwood_log": "Redwood Log",
+  "block.sammod.redwood_wood": "Redwood Wood",
+  "block.sammod.stripped_redwood_log": "Stripped Redwood Log",
+  "block.sammod.stripped_redwood_wood": "Stripped Redwood Wood",
+  "block.sammod.redwood_planks": "Redwood Planks",
+  "block.sammod.redwood_leaves": "Redwood Leaves",
+  "block.sammod.redwood_sapling": "Redwood Sapling",
 
   "enchantment.sammod.lightning": "Lightning",
 
