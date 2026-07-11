@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:forest",
+    "minecraft:flower_forest",
+    "minecraft:stony_peaks"
+  ],
+  "features": "sammod:blueberry_bush_placed",
+  "step": "vegetal_decoration"
+}

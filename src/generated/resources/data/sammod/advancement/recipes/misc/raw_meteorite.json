@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_meteorite_block": {
+    "has_raw_meteorite": {
       "conditions": {
         "items": [
           {
-            "items": "sammod:raw_meteorite_block"
+            "items": "sammod:raw_meteorite"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_meteorite_block"
+      "has_raw_meteorite"
     ]
   ],
   "rewards": {

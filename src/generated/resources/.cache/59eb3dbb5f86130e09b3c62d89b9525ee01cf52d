@@ -1,4 +1,4 @@
-// 1.21	2026-06-28T18:42:44.3041677	Loot Tables
+// 1.21	2026-07-01T11:58:46.9369096	Loot Tables
 f7de5ba8f7319a2073227e946b7105de40956d45 data/sammod/loot_table/blocks/blueberry_bush.json
 b6a17db26bf8c24f47f1fc81b68cd7022ec8f7e2 data/sammod/loot_table/blocks/blue_opal_ore.json
 20b1df9ea5ac3392d7df11c60bc2b01e850d2586 data/sammod/loot_table/blocks/cat_note_block.json
@@ -8,10 +8,16 @@ e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_la
 4bb3bc6a6e22ed5121207ee942d5a70b67bc23fc data/sammod/loot_table/blocks/meteorite_deepslate_ore.json
 90018cc646d759d05f363282ddfd134055d96a93 data/sammod/loot_table/blocks/meteorite_ore.json
 fe319dd1a8b9f49521aff5b46bf71cb3411e3f78 data/sammod/loot_table/blocks/raw_meteorite_block.json
+5cd20fdb9198f3b2fefb005ea8b1f09f6d7bdd7b data/sammod/loot_table/blocks/redwood_door.json
+08db5fb677aa0c1208d523a63169e8ff3df81080 data/sammod/loot_table/blocks/redwood_fence.json
+665b5f3f686ad0f65a5f68f265ccc5a486f3be03 data/sammod/loot_table/blocks/redwood_fence_gate.json
 7f999cecc08cf1f020b6cef2d2f952216924ce09 data/sammod/loot_table/blocks/redwood_leaves.json
 d093665daf590019c6d985c797ee4841bcf5f010 data/sammod/loot_table/blocks/redwood_log.json
 92ecdaa6fd71440c1977c99e4d7ca0548465fb96 data/sammod/loot_table/blocks/redwood_planks.json
 89cac5f052584c826ece974a8d1a563870ec6ea6 data/sammod/loot_table/blocks/redwood_sapling.json
+7fa8caaec82f15862ba1c3dd6a18e507cd084e95 data/sammod/loot_table/blocks/redwood_slab.json
+76b54252c609b6036389b38d0736a6590d7cb08b data/sammod/loot_table/blocks/redwood_stairs.json
+869b749910c8c7df5f546c3b245db723546946ab data/sammod/loot_table/blocks/redwood_trapdoor.json
 06bbf1e79fa13c724e3025e2d9867121b3eefbd9 data/sammod/loot_table/blocks/redwood_wood.json
 67a5746af45367c15606d030240855abaec4212f data/sammod/loot_table/blocks/rice_crop.json
 2c27a458bb75ad2d00a2929ead2ba8f67d29febc data/sammod/loot_table/blocks/stripped_redwood_log.json

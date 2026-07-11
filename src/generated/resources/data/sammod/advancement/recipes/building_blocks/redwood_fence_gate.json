@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_deepslate_coal_ore": {
+    "has_redwood_planks": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:deepslate_coal_ore"
+            "items": "sammod:redwood_planks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "sammod:meteorite_axe"
+        "recipe": "sammod:redwood_fence_gate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_deepslate_coal_ore"
+      "has_redwood_planks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "sammod:meteorite_axe"
+      "sammod:redwood_fence_gate"
     ]
   }
 }

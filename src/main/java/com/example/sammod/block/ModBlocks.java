@@ -123,7 +123,6 @@ public class ModBlocks {
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
-
     //These redwood planks use an anonymous class to override certain properties
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)){
@@ -164,7 +163,31 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
-            () -> new SaplingBlock(ModTreeGrowers.REDDWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new ModSaplingBlock(ModTreeGrowers.REDDWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),
+                    () -> SamMod.REDWOOD_SAPLING_BLOCK));
+
+    public static final RegistryObject<SlabBlock> REDWOOD_SLAB = registerBlock("redwood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .instabreak().strength(1.0F)));
+
+    public static final RegistryObject<FenceBlock> REDWOOD_FENCE = registerBlock("redwood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .instabreak().strength(1.0F)));
+    public static final RegistryObject<FenceGateBlock> REDWOOD_FENCE_GATE = registerBlock("redwood_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+                    .instabreak().strength(1.0F)));
+
+    public static final RegistryObject<DoorBlock> REDWOOD_DOOR = registerBlock("redwood_door",
+            () -> new DoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.of()
+                    .instabreak().strength(1.0F).noCollission()));
+
+    public static final RegistryObject<TrapDoorBlock> REDWOOD_TRAPDOOR = registerBlock("redwood_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.of()
+                    .instabreak().strength(1.0F)));
+
+    public static final RegistryObject<StairBlock> REDWOOD_STAIRS = registerBlock("redwood_stairs",
+            () -> new StairBlock(ModBlocks.REDWOOD_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .instabreak().strength(1.0F)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

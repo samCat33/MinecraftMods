@@ -39,6 +39,8 @@
   "item.sammod.blue_opal_shard": "Blue Opal Shard",
   "item.sammod.blue_opal_ingot": "Blue Opal Ingot",
 
+  "item.sammod.triceratops_spawn_egg": "Triceratops Spawn Egg",
+
   "trim_pattern.sammod.big_s": "Big S",
   "trim_material.sammod.meteorite_ingot": "Meteorite Material",
 
@@ -60,6 +62,13 @@
   "block.sammod.susie_stairs": "Susie Stairs",
   "block.sammod.susie_trapdoor": "Susie Trapdoor",
   "block.sammod.susie_wall": "Susie Wall",
+
+  "block.sammod.redwood_door": "Redwood Door",
+  "block.sammod.redwood_fence": "Redwood Fence",
+  "block.sammod.redwood_fence_gate": "Redwood Fence Gate",
+  "block.sammod.redwood_slab": "Redwood Slab",
+  "block.sammod.redwood_stairs": "Redwood Stairs",
+  "block.sammod.redwood_trapdoor": "Redwood Trapdoor",
 
   "block.sammod.custom_lamp": "Custom Lamp",
   "block.sammod.coal_converter": "Coal Converter",
@@ -92,5 +101,7 @@
   "effect.sammod.sticky": "Sticky",
 
   "painting.sammod.rainbow.title": "Rainbow",
-  "painting.sammod.rainbow.author": "NewPigwurst"
+  "painting.sammod.rainbow.author": "NewPigwurst",
+
+  "entity.sammod.triceratops": "Triceratops"
 }

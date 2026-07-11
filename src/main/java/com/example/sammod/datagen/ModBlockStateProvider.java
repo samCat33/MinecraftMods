@@ -43,14 +43,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLUE_OPAL_ORE);
 
         stairsBlock(ModBlocks.SUSIE_STAIRS.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
-        slabBlock(ModBlocks.SUSIE_SLAB.get(), blockTexture(ModBlocks.SUSIE_TNT.get()), blockTexture(ModBlocks.SUSIE_TNT.get()));
 
+        slabBlock(ModBlocks.SUSIE_SLAB.get(), blockTexture(ModBlocks.SUSIE_TNT.get()), blockTexture(ModBlocks.SUSIE_TNT.get()));
 
         buttonBlock(ModBlocks.SUSIE_BUTTON.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
         pressurePlateBlock(ModBlocks.SUSIE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
 
         fenceBlock(ModBlocks.SUSIE_FENCE.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
+
         fenceGateBlock(ModBlocks.SUSIE_FENCE_GATE.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
+
         wallBlock(ModBlocks.SUSIE_WALL.get(), blockTexture(ModBlocks.SUSIE_TNT.get()));
 
         doorBlockWithRenderType(ModBlocks.SUSIE_DOOR.get(), modLoc("block/susie_door_bottom"),
@@ -59,6 +61,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.SUSIE_STAIRS);
         blockItem(ModBlocks.SUSIE_SLAB);
+
         blockItem(ModBlocks.SUSIE_PRESSURE_PLATE);
         blockItem(ModBlocks.SUSIE_FENCE_GATE);
         blockItem(ModBlocks.SUSIE_TRAPDOOR, "_bottom");
@@ -87,6 +90,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.REDWOOD_LEAVES);
         saplingBlock(ModBlocks.REDWOOD_SAPLING);
 
+        fenceBlock(ModBlocks.REDWOOD_FENCE.get(), blockTexture(ModBlocks.REDWOOD_PLANKS.get()));
+
+        fenceGateBlock(ModBlocks.REDWOOD_FENCE_GATE.get(), blockTexture(ModBlocks.REDWOOD_PLANKS.get()));
+        doorBlockWithRenderType(ModBlocks.REDWOOD_DOOR.get(), modLoc("block/redwood_door_bottom"),
+                modLoc("block/redwood_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.REDWOOD_TRAPDOOR.get(), modLoc("block/redwood_trapdoor"), true, "cutout");
+
+        stairsBlock(ModBlocks.REDWOOD_STAIRS.get(), blockTexture(ModBlocks.REDWOOD_PLANKS.get()));
+        slabBlock(ModBlocks.REDWOOD_SLAB.get(), blockTexture(ModBlocks.REDWOOD_PLANKS.get()), blockTexture(ModBlocks.REDWOOD_PLANKS.get()));
+
+        blockItem(ModBlocks.REDWOOD_FENCE_GATE);
+        blockItem(ModBlocks.REDWOOD_TRAPDOOR, "_bottom");
+
+        blockItem(ModBlocks.REDWOOD_STAIRS);
+        blockItem(ModBlocks.REDWOOD_SLAB);
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject){

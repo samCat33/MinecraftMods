@@ -81,6 +81,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.METEORITE_BOOTS);
 
         saplingItem(ModBlocks.REDWOOD_SAPLING);
+        fenceItem(ModBlocks.REDWOOD_FENCE, ModBlocks.REDWOOD_PLANKS);
+        simpleBlockItem(ModBlocks.REDWOOD_DOOR);
+
+        withExistingParent(ModItems.TRICERATOPS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     //We need a custom method for our sapling item because it is registered under block

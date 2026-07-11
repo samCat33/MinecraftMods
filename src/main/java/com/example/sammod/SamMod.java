@@ -4,12 +4,17 @@ import com.example.sammod.block.ModBlocks;
 import com.example.sammod.component.ModDataComponentTypes;
 import com.example.sammod.effect.ModEffects;
 import com.example.sammod.enchantment.ModEnchantmentEffects;
+import com.example.sammod.entity.ModEntities;
+import com.example.sammod.entity.client.TriceratopsRenderer;
 import com.example.sammod.item.ModCreativeModeTabs;
 import com.example.sammod.item.ModItems;
 import com.example.sammod.potion.ModPotions;
 import com.example.sammod.sound.MySillySounds;
 import com.example.sammod.util.ModItemProperties;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +35,7 @@ public class SamMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "sammod";
+    public static final Block REDWOOD_SAPLING_BLOCK = Blocks.ANVIL;
 
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public SamMod()
@@ -42,7 +48,7 @@ public class SamMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        //Register creative mode tabs, items, blocks, and data component types
+        //Register all of our registries to the modEventBus
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -51,6 +57,7 @@ public class SamMod
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -136,6 +143,17 @@ public class SamMod
             event.accept(ModBlocks.REDWOOD_PLANKS.get());
             event.accept(ModBlocks.REDWOOD_LEAVES.get());
             event.accept(ModBlocks.REDWOOD_SAPLING.get());
+
+            event.accept(ModBlocks.REDWOOD_FENCE.get());
+            event.accept(ModBlocks.REDWOOD_FENCE_GATE.get());
+            event.accept(ModBlocks.REDWOOD_STAIRS.get());
+            event.accept(ModBlocks.REDWOOD_SLAB.get());
+            event.accept(ModBlocks.REDWOOD_DOOR.get());
+            event.accept(ModBlocks.REDWOOD_TRAPDOOR.get());
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+            event.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
         }
     }
 
@@ -156,6 +174,8 @@ public class SamMod
         {
             //CustomItemProperties is on the client side
             ModItemProperties.addCustomItemProperties();
+
+            EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
         }
     }
 }

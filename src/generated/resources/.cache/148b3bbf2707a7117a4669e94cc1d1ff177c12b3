@@ -1,7 +1,8 @@
-// 1.21	2026-06-28T18:42:44.3051675	Tags for minecraft:block mod id sammod
-7a6d9bb2cb252382bb54262a74df34bbafad7a22 data/minecraft/tags/block/fences.json
-bb18d6347f932a5905306e066563d26b01d34e7e data/minecraft/tags/block/fence_gates.json
+// 1.21	2026-07-01T11:58:46.9528261	Tags for minecraft:block mod id sammod
+0dd6d7fe4cbb79996c752a4ad622f256d1e6bccb data/minecraft/tags/block/fences.json
+84d8d196e902d6cfc34a9ce39f79b4ea0bd2c8c2 data/minecraft/tags/block/fence_gates.json
 bfa097350364b4bff5371b8489e2b56468eed81e data/minecraft/tags/block/logs_that_burn.json
+7c85d3595b9bd95d5bc878f63db137b778664c2a data/minecraft/tags/block/mineable/axe.json
 6133efa42998b9edfb229e640ad5214bd74351ca data/minecraft/tags/block/mineable/pickaxe.json
 a2623d4eff7adced21ee33ebbfc42abfa3692d4c data/minecraft/tags/block/needs_diamond_tool.json
 ababeac45115c340ee5e489b0b888ec2f41a8a0e data/minecraft/tags/block/needs_iron_tool.json

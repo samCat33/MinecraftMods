@@ -87,6 +87,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.REDWOOD_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.REDWOOD_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        this.add(ModBlocks.REDWOOD_DOOR.get(),
+                createDoorTable(ModBlocks.REDWOOD_DOOR.get()));
+
+        this.add(ModBlocks.REDWOOD_SLAB.get(),
+                createSlabItemTable(ModBlocks.REDWOOD_SLAB.get()));
+
+        dropSelf(ModBlocks.REDWOOD_FENCE.get());
+        dropSelf(ModBlocks.REDWOOD_FENCE_GATE.get());
+        dropSelf(ModBlocks.REDWOOD_STAIRS.get());
+        dropSelf(ModBlocks.REDWOOD_TRAPDOOR.get());
 
         //Drop the rice crop when it is harvested at its maximum age
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition

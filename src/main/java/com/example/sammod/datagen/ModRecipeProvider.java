@@ -89,57 +89,57 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Blocks.DEEPSLATE_COAL_ORE)
                 .unlockedBy(getHasName(Items.DEEPSLATE_COAL_ORE), has(Items.DEEPSLATE_COAL_ORE)).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.METEORITE_PICKAXE.get())
+        //The following five recipes are for the meteorite tools
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.METEORITE_PICKAXE.get())
                 .pattern("AAA")
                 .pattern(" B ")
                 .pattern(" B ")
                 .define('A', ModItems.METEORITE_INGOT.get())
                 .define('B', Items.STICK)
-                .unlockedBy(getHasName(Items.DEEPSLATE_COAL_ORE), has(Items.DEEPSLATE_COAL_ORE)).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.METEORITE_INGOT.get()), has(ModItems.METEORITE_INGOT.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.METEORITE_AXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.METEORITE_AXE.get())
                 .pattern("AA ")
                 .pattern("AB ")
                 .pattern(" B ")
                 .define('A', ModItems.METEORITE_INGOT.get())
                 .define('B', Items.STICK)
-                .unlockedBy(getHasName(Items.DEEPSLATE_COAL_ORE), has(Items.DEEPSLATE_COAL_ORE)).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.METEORITE_INGOT.get()), has(ModItems.METEORITE_INGOT.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.METEORITE_SWORD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.METEORITE_SWORD.get())
                 .pattern(" A ")
                 .pattern(" A ")
                 .pattern(" B ")
                 .define('A', ModItems.METEORITE_INGOT.get())
                 .define('B', Items.STICK)
-                .unlockedBy(getHasName(Items.DEEPSLATE_COAL_ORE), has(Items.DEEPSLATE_COAL_ORE)).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.METEORITE_INGOT.get()), has(ModItems.METEORITE_INGOT.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.METEORITE_SHOVEL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.METEORITE_SHOVEL.get())
                 .pattern(" A ")
                 .pattern(" B ")
                 .pattern(" B ")
                 .define('A', ModItems.METEORITE_INGOT.get())
                 .define('B', Items.STICK)
-                .unlockedBy(getHasName(Items.DEEPSLATE_COAL_ORE), has(Items.DEEPSLATE_COAL_ORE)).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.METEORITE_INGOT.get()), has(ModItems.METEORITE_INGOT.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.METEORITE_HOE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.METEORITE_HOE.get())
                 .pattern("AA ")
                 .pattern(" B ")
                 .pattern(" B ")
                 .define('A', ModItems.METEORITE_INGOT.get())
                 .define('B', Items.STICK)
-                .unlockedBy(getHasName(Items.DEEPSLATE_COAL_ORE), has(Items.DEEPSLATE_COAL_ORE)).save(pRecipeOutput);
-
+                .unlockedBy(getHasName(ModItems.METEORITE_INGOT.get()), has(ModItems.METEORITE_INGOT.get())).save(pRecipeOutput);
 
         //.save(pRecipeOutput, SamMod.MOD_ID + ":string") is for when two recipes have the same output to avoid errors
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 9)
                 .requires(ModBlocks.METEORITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.METEORITE_BLOCK.get()), has(ModBlocks.METEORITE_BLOCK.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.METEORITE_INGOT.get()), has(ModItems.METEORITE_INGOT.get())).save(pRecipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_METEORITE.get(), 9)
                 .requires(ModBlocks.RAW_METEORITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.RAW_METEORITE_BLOCK.get()), has(ModBlocks.RAW_METEORITE_BLOCK.get())).save(pRecipeOutput);
-
+                .unlockedBy(getHasName(ModItems.RAW_METEORITE.get()), has(ModItems.RAW_METEORITE.get())).save(pRecipeOutput);
 
         //These are all the furnace recipes
         oreSmelting(pRecipeOutput, METEORITE_SMELTABLES, RecipeCategory.MISC, ModItems.METEORITE_INGOT.get(), 5, 400, "meteorite");
@@ -174,6 +174,106 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         trimSmithing(pRecipeOutput, ModItems.BIG_S_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "big_s"));
 
+        //Sticks from redwood planks
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern("   ")
+                .define('A',ModBlocks.REDWOOD_PLANKS.get())
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK)).save(pRecipeOutput);
+
+        //Wooden tools from redwood planks
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.WOODEN_PICKAXE)
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.WOODEN_AXE)
+                .pattern("AA ")
+                .pattern("AB ")
+                .pattern(" B ")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.WOODEN_SWORD)
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.WOODEN_HOE)
+                .pattern("AA ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.WOODEN_SHOVEL)
+                .pattern(" A ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+
+        //Redwood Building Accessories
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_FENCE.get(),3)
+                .pattern("   ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_FENCE_GATE.get())
+                .pattern("   ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', Items.STICK)
+                .define('B', ModBlocks.REDWOOD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_DOOR.get(),3)
+                .pattern("AA ")
+                .pattern("AA ")
+                .pattern("AA ")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_TRAPDOOR.get(), 2)
+                .pattern("   ")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_SLAB.get(),6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("AAA")
+                .define('A', ModBlocks.REDWOOD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_PLANKS.get()), has(ModBlocks.REDWOOD_PLANKS.get())).save(pRecipeOutput);
+
+
+        //Recipes for redwood planks from redwood logs and stripped redwood logs
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDWOOD_PLANKS.get(),4)
+                .requires(ModBlocks.REDWOOD_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.REDWOOD_LOG.get()), has(ModBlocks.REDWOOD_LOG.get())).save(pRecipeOutput);
     }
 
     protected static void oreSmelting(

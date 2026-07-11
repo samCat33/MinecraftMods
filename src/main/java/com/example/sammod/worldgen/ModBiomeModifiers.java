@@ -7,6 +7,7 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
@@ -17,6 +18,15 @@ public class ModBiomeModifiers {
             = registerKey("add_meteorite_ore");
     public static final ResourceKey<BiomeModifier> ADD_BLUE_OPAL_ORE
             = registerKey("add_blue_opal_ore");
+
+    public static final ResourceKey<BiomeModifier> ADD_REDWOOD_TREE =
+            registerKey("add_redwood_tree");
+
+    public static final ResourceKey<BiomeModifier> ADD_MEGA_REDWOOD_TREE =
+            registerKey("add_mega_redwood_tree");
+
+    public static final ResourceKey<BiomeModifier> ADD_BLUEBERRY_BUSH =
+            registerKey("add_blueberry_bush");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context){
 
@@ -41,6 +51,28 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.BLUE_OPAL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_REDWOOD_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+
+                //This first parameter is a set of the biomes the redwood tree can grow in
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.REDWOOD_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_MEGA_REDWOOD_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+
+                //This first parameter is a set of the biomes the mega redwood tree can grow in
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.MEGA_REDWOOD_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_BLUEBERRY_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+
+                //This first parameter is a set of the biomes the mega redwood tree can grow in
+                HolderSet.direct(biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST),
+                        biomes.getOrThrow(Biomes.STONY_PEAKS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.BLUEBERRY_BUSH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name){

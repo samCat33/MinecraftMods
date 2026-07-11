@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sammod:block/redwood_slab"
+    },
+    "type=double": {
+      "model": "sammod:block/redwood_planks"
+    },
+    "type=top": {
+      "model": "sammod:block/redwood_slab_top"
+    }
+  }
+}

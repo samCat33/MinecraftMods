@@ -36,8 +36,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SUSIE_DOOR.get())
                 .add(ModBlocks.SUSIE_PRESSURE_PLATE.get())
                 .add(ModBlocks.SUSIE_TRAPDOOR.get())
-
                 .add(ModBlocks.BLUE_OPAL_ORE.get());
+
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.REDWOOD_FENCE.get())
+                .add(ModBlocks.REDWOOD_SLAB.get())
+                .add(ModBlocks.REDWOOD_STAIRS.get())
+                .add(ModBlocks.REDWOOD_FENCE_GATE.get())
+                .add(ModBlocks.REDWOOD_DOOR.get())
+                .add(ModBlocks.REDWOOD_TRAPDOOR.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.METEORITE_BLOCK.get())
@@ -46,8 +53,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.METEORITE_ORE.get())
                 .add(ModBlocks.METEORITE_DEEPSLATE_ORE.get());
 
-        tag(BlockTags.FENCES).add(ModBlocks.SUSIE_FENCE.get());
-        tag(BlockTags.FENCE_GATES).add(ModBlocks.SUSIE_FENCE_GATE.get());
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.SUSIE_FENCE.get())
+                .add(ModBlocks.REDWOOD_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SUSIE_FENCE_GATE.get())
+                .add(ModBlocks.REDWOOD_FENCE_GATE.get());
+
         tag(BlockTags.WALLS).add(ModBlocks.SUSIE_WALL.get());
 
         tag(ModTags.Blocks.NEEDS_METEORITE_TOOL)

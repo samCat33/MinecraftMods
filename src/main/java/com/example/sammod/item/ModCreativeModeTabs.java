@@ -52,6 +52,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.BLUE_OPAL_SHARD.get());
                                 output.accept(ModItems.BLUE_OPAL_INGOT.get());
 
+                                output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
+
                             }).build());
 
     public static final RegistryObject<CreativeModeTab> SAMMODBLOCKS =
@@ -93,6 +95,13 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.REDWOOD_PLANKS.get());
                                 output.accept(ModBlocks.REDWOOD_LEAVES.get());
                                 output.accept(ModBlocks.REDWOOD_SAPLING.get());
+
+                                output.accept(ModBlocks.REDWOOD_FENCE.get());
+                                output.accept(ModBlocks.REDWOOD_FENCE_GATE.get());
+                                output.accept(ModBlocks.REDWOOD_STAIRS.get());
+                                output.accept(ModBlocks.REDWOOD_SLAB.get());
+                                output.accept(ModBlocks.REDWOOD_DOOR.get());
+                                output.accept(ModBlocks.REDWOOD_TRAPDOOR.get());
                             }).build());
 
     public static void register(IEventBus bus) {
