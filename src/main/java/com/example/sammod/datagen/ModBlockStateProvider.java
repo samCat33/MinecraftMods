@@ -188,15 +188,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ResourceLocation.fromNamespaceAndPath(SamMod.MOD_ID, "block/" + "custom_lamp_on")));
     }
 
+
+    //Used for all the blocks that also are used as items
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
+    //Used for the blocks that are not also used as items
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject){
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("sammod:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
+    //Used specifically for the trapdoors
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix){
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("sammod:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));

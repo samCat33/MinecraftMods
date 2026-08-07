@@ -1,10 +1,11 @@
-// 1.21	2026-07-10T16:57:58.1161506	Registries
+// 1.21	2026-07-13T18:40:11.4611374	Registries
 3723776988785e5ccce6f68e42560fb4a4b95e3b data/sammod/enchantment/lightning.json
 8c247e9b0172ae0c7f4489be21ed07ac9035a4fd data/sammod/forge/biome_modifier/add_blueberry_bush.json
 07598ddf401a809f69199a2fd431e9c5579aec83 data/sammod/forge/biome_modifier/add_blue_opal_ore.json
 3e45839c66d9922cc43de805e10b1f77908ea918 data/sammod/forge/biome_modifier/add_mega_redwood_tree.json
 6de7f23330168e54cae31064dd301d306a5b451c data/sammod/forge/biome_modifier/add_meteorite_ore.json
 7ef8d06bfc00e6e56603fc3aa0dd9c94068141b7 data/sammod/forge/biome_modifier/add_redwood_tree.json
+3c27f0ba2f7634de9e88969031dcf96d5772a66a data/sammod/forge/biome_modifier/spawn_triceratops.json
 323592a8718a443f1a08fcd56af63c6386fa07fa data/sammod/trim_material/meteorite_ingot.json
 f1075065a75d2207efde7ad07d891fbe5942a228 data/sammod/trim_pattern/big_s.json
 04a77418940964e5b3247afa75465de2d598c85a data/sammod/worldgen/configured_feature/blueberry_bush.json

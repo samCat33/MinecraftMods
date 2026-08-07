@@ -3,10 +3,7 @@ package com.example.sammod.item;
 import com.example.sammod.SamMod;
 import com.example.sammod.block.ModBlocks;
 import com.example.sammod.entity.ModEntities;
-import com.example.sammod.item.items.FuelItem;
-import com.example.sammod.item.items.HammerItem;
-import com.example.sammod.item.items.MidasTouchItem;
-import com.example.sammod.item.items.ModArmorItem;
+import com.example.sammod.item.items.*;
 import com.example.sammod.sound.MySillySounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -149,6 +146,12 @@ public class ModItems {
     public static final RegistryObject<Item> TRICERATOPS_SPAWN_EGG = ITEMS.register("triceratops_spawn_egg",
             //The hex values are the colors of the spawn egg (primary, secondary)
             () -> new ForgeSpawnEggItem(ModEntities.TRICERATOPS, 0x53524b, 0xdac741, new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMAHAWK_ITEM = ITEMS.register("tomahawk",
+            () -> new TomahawkItem(new Item.Properties().stacksTo(99)));
+
+    public static final RegistryObject<Item> SUPER_STAFF = ITEMS.register("superstaff",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);

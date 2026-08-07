@@ -189,6 +189,10 @@ public class ModBlocks {
             () -> new StairBlock(ModBlocks.REDWOOD_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .instabreak().strength(1.0F)));
 
+    //Chair block has no occlusion, meaning no shadows
+    public static final RegistryObject<Block> CHAIR = registerBlock("chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion().strength(1.0F)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

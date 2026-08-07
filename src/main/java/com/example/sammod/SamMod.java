@@ -5,6 +5,8 @@ import com.example.sammod.component.ModDataComponentTypes;
 import com.example.sammod.effect.ModEffects;
 import com.example.sammod.enchantment.ModEnchantmentEffects;
 import com.example.sammod.entity.ModEntities;
+import com.example.sammod.entity.client.ChairRenderer;
+import com.example.sammod.entity.client.TomahawkProjectileRenderer;
 import com.example.sammod.entity.client.TriceratopsRenderer;
 import com.example.sammod.item.ModCreativeModeTabs;
 import com.example.sammod.item.ModItems;
@@ -105,6 +107,7 @@ public class SamMod
 
             event.accept(ModItems.METEORITE_HORSE_ARMOR.get());
             event.accept(ModItems.SUPER_BOW.get());
+            event.accept(ModItems.TOMAHAWK_ITEM.get());
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
@@ -150,6 +153,8 @@ public class SamMod
             event.accept(ModBlocks.REDWOOD_SLAB.get());
             event.accept(ModBlocks.REDWOOD_DOOR.get());
             event.accept(ModBlocks.REDWOOD_TRAPDOOR.get());
+
+            event.accept(ModBlocks.CHAIR.get());
         }
 
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
@@ -176,6 +181,8 @@ public class SamMod
             ModItemProperties.addCustomItemProperties();
 
             EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
+            EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+            EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
         }
     }
 }

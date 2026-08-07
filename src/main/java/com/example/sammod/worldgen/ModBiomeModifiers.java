@@ -1,6 +1,7 @@
 package com.example.sammod.worldgen;
 
 import com.example.sammod.SamMod;
+import com.example.sammod.entity.ModEntities;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -8,10 +9,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.List;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_METEORITE_ORE
@@ -27,6 +31,9 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_BLUEBERRY_BUSH =
             registerKey("add_blueberry_bush");
+
+    public static final ResourceKey<BiomeModifier> SPAWN_TRICERATOPS =
+            registerKey("spawn_triceratops");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context){
 
@@ -73,6 +80,16 @@ public class ModBiomeModifiers {
                         biomes.getOrThrow(Biomes.STONY_PEAKS)),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.BLUEBERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        //This defines the biomes that the triceratops can spawn in
+        context.register(SPAWN_TRICERATOPS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.BAMBOO_JUNGLE),
+                        biomes.getOrThrow(Biomes.JUNGLE), biomes.getOrThrow(Biomes.PLAINS),
+                        biomes.getOrThrow(Biomes.SAVANNA)),
+
+                //Higher weights make this mob spawn more frequently, but at the cost of other mobs
+                //spawning less frequently.
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TRICERATOPS.get(), 25, 3, 5))));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name){

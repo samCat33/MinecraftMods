@@ -53,6 +53,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.BLUE_OPAL_INGOT.get());
 
                                 output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
+                                output.accept(ModItems.TOMAHAWK_ITEM.get());
+                                output.accept(ModItems.SUPER_STAFF.get());
 
                             }).build());
 
@@ -102,6 +104,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.REDWOOD_SLAB.get());
                                 output.accept(ModBlocks.REDWOOD_DOOR.get());
                                 output.accept(ModBlocks.REDWOOD_TRAPDOOR.get());
+
+                                output.accept(ModBlocks.CHAIR.get());
                             }).build());
 
     public static void register(IEventBus bus) {

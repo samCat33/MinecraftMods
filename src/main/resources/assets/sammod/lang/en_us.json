@@ -40,6 +40,8 @@
   "item.sammod.blue_opal_ingot": "Blue Opal Ingot",
 
   "item.sammod.triceratops_spawn_egg": "Triceratops Spawn Egg",
+  "item.sammod.tomahawk": "Tomahawk",
+  "item.sammod.superstaff": "Super Staff",
 
   "trim_pattern.sammod.big_s": "Big S",
   "trim_material.sammod.meteorite_ingot": "Meteorite Material",
@@ -85,6 +87,8 @@
   "block.sammod.redwood_leaves": "Redwood Leaves",
   "block.sammod.redwood_sapling": "Redwood Sapling",
 
+  "block.sammod.chair": "Chair",
+
   "enchantment.sammod.lightning": "Lightning",
 
 
@@ -103,5 +107,6 @@
   "painting.sammod.rainbow.title": "Rainbow",
   "painting.sammod.rainbow.author": "NewPigwurst",
 
-  "entity.sammod.triceratops": "Triceratops"
+  "entity.sammod.triceratops": "Triceratops",
+  "entity.sammod.tomahawk": "Tomahawk"
 }
