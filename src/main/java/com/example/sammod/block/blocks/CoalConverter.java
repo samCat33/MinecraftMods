@@ -30,6 +30,10 @@ public class CoalConverter extends Block {
         super(properties);
     }
 
+
+
+    //If the player interacts with this block while carrying stone or cobbled deepslate,
+    //turn what they are carrying into coal
     @Override
     protected ItemInteractionResult useItemOn(
             ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult
@@ -46,6 +50,11 @@ public class CoalConverter extends Block {
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
+
+    //When an entity "steps" on this block (this can also mean when an item is on top of this block,
+    // which is what we are using this method for here),
+    //if the entity is an item and a COAL_CONVERTER_ITEM,
+    //turn it into coal according to how many item entities there are
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if (pEntity instanceof ItemEntity itemEntity){
@@ -55,6 +64,8 @@ public class CoalConverter extends Block {
         }
     }
 
+    //This returns whether the item thrown onto the coal converter is one of
+    //the items that has the COAL_CONVERTER_ITEMS tag
     private boolean isValidItem(ItemStack item) {
         return item.is(ModTags.Items.COAL_CONVERTER_ITEMS);
     }

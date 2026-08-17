@@ -150,8 +150,10 @@ public class ModItems {
     public static final RegistryObject<Item> TOMAHAWK_ITEM = ITEMS.register("tomahawk",
             () -> new TomahawkItem(new Item.Properties().stacksTo(99)));
 
-    public static final RegistryObject<Item> SUPER_STAFF = ITEMS.register("superstaff",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WATER_STAFF = ITEMS.register("water_staff",
+            () -> new WaterStaffItem(new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.METEORITE, 3, -2.8F)
+                    ).stacksTo(1)));
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);

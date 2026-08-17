@@ -54,7 +54,7 @@ public class ModCreativeModeTabs {
 
                                 output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
                                 output.accept(ModItems.TOMAHAWK_ITEM.get());
-                                output.accept(ModItems.SUPER_STAFF.get());
+                                output.accept(ModItems.WATER_STAFF.get());
 
                             }).build());
 
@@ -106,6 +106,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.REDWOOD_TRAPDOOR.get());
 
                                 output.accept(ModBlocks.CHAIR.get());
+                                output.accept(ModBlocks.VET_STATION.get());
                             }).build());
 
     public static void register(IEventBus bus) {

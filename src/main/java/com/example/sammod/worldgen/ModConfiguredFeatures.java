@@ -103,13 +103,19 @@ public class ModConfiguredFeatures {
                 //Second parameter: Air radius required for lower part of tree
                 //Third parameter: Air radius required for upper part of tree
 
-                //The dirt makes sure that if we plant this tree
+                //The dirt method makes sure that if we plant this tree
                 //on our special block, that block does not turn into dirt again
+
+
+                //THE SPECIAL BLOCK IS IN SamMod.java
                 new TwoLayersFeatureSize(3, 2, 3))
-                .dirt(BlockStateProvider.simple(Blocks.ANVIL)).build());
+                .dirt(BlockStateProvider.simple(Blocks.PODZOL)).build());
 
         //Look at VegetationFeatures.java to see the code from the sweet berry bush
         //we copied over
+
+        //Spawns the blueberries in a patch, at their maximum age, and on the list
+        //of acceptable blocks
         register(context, BLUEBERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new
                         SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BLUEBERRY_BUSH.get()

@@ -5,9 +5,9 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:anvil",
+        "Name": "minecraft:podzol",
         "Properties": {
-          "facing": "north"
+          "snowy": "false"
         }
       }
     },

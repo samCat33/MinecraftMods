@@ -80,10 +80,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         axisBlock(ModBlocks.STRIPPED_REDWOOD_WOOD.get(),
                 blockTexture(ModBlocks.STRIPPED_REDWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_REDWOOD_LOG.get()));
 
+        //This allows the blocks to render in the inventory
         blockItem(ModBlocks.REDWOOD_LOG);
         blockItem(ModBlocks.REDWOOD_WOOD);
         blockItem(ModBlocks.STRIPPED_REDWOOD_LOG);
         blockItem(ModBlocks.STRIPPED_REDWOOD_WOOD);
+        blockItem(ModBlocks.VET_STATION);
 
         blockWithItem(ModBlocks.REDWOOD_PLANKS);
 

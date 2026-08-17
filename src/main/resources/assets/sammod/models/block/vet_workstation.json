@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "sammod:block/vet_workstation_front",
+    "down": "sammod:block/vet_workstation_bottom",
+    "up": "sammod:block/vet_workstation_top",
+    "north": "sammod:block/vet_workstation_front",
+    "south": "sammod:block/vet_workstation_side",
+    "east": "sammod:block/vet_workstation_side",
+    "west": "sammod:block/vet_workstation_side"
+  }
+}

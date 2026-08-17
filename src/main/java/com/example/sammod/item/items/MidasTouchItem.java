@@ -1,6 +1,9 @@
 package com.example.sammod.item.items;
 
 import com.example.sammod.component.ModDataComponentTypes;
+import com.example.sammod.particle.ModParticles;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -37,7 +40,7 @@ public class MidasTouchItem extends Item {
         if (!level.isClientSide && clickedBlock != Blocks.GOLD_BLOCK) {
             level.setBlockAndUpdate(context.getClickedPos(), Blocks.GOLD_BLOCK.defaultBlockState());
 
-            //hurtAndBreak(damage, level, player, item (use lambda function to determine when it breaks
+            //hurtAndBreak(damage, level, player, item (use lambda function to determine when it breaks))
             context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) context.getPlayer()),
                     item -> {;
                         assert context.getPlayer() != null;
@@ -46,6 +49,29 @@ public class MidasTouchItem extends Item {
 
             level.playSound(null, context.getClickedPos(), SoundEvents.ENCHANTMENT_TABLE_USE,
                     SoundSource.BLOCKS, 1.0F, 2.0F);
+
+
+            //sendParticles is server-side
+            //sendParticles(particle option, x-position, y-position, z-position, count, x-offset, y-offset, z-offset, speed)
+            //the position coordinates are anchored on the bottom-right side of the block (I think)
+
+            //This creates new particles according to the type of block that was converted
+            /*((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, clickedBlock.defaultBlockState()),
+                    context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.0, context.getClickedPos().getZ() + 0.5,
+                    10, 0, 0, 0, 1);*/
+
+            //This creates new particles according to a predefined particle type
+            ((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, Blocks.GOLD_BLOCK.defaultBlockState()),
+                    context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.0,
+                    context.getClickedPos().getZ() + 0.5, 10, 0, 0,0, 2);
+
+            ((ServerLevel) level).sendParticles(ParticleTypes.HAPPY_VILLAGER,
+                    context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.0,
+                    context.getClickedPos().getZ() + 0.5, 20, 0, 0.5,0, 50);
+
+            ((ServerLevel) level).sendParticles(ModParticles.SHINY_PARTICLES.get(),
+                    context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.0,
+                    context.getClickedPos().getZ() + 0.5, 8, 0, 0,0, 2);
 
             context.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), context.getClickedPos());
 

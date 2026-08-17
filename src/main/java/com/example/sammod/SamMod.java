@@ -10,15 +10,20 @@ import com.example.sammod.entity.client.TomahawkProjectileRenderer;
 import com.example.sammod.entity.client.TriceratopsRenderer;
 import com.example.sammod.item.ModCreativeModeTabs;
 import com.example.sammod.item.ModItems;
+import com.example.sammod.loot.ModLootModifiers;
+import com.example.sammod.particle.ModParticles;
+import com.example.sammod.particle.ShinyParticles;
 import com.example.sammod.potion.ModPotions;
 import com.example.sammod.sound.MySillySounds;
 import com.example.sammod.util.ModItemProperties;
+import com.example.sammod.villager.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -37,7 +42,7 @@ public class SamMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "sammod";
-    public static final Block REDWOOD_SAPLING_BLOCK = Blocks.ANVIL;
+    public static final Block REDWOOD_SAPLING_BLOCK = Blocks.PODZOL;
 
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public SamMod()
@@ -60,6 +65,9 @@ public class SamMod
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -160,6 +168,10 @@ public class SamMod
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
             event.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
         }
+
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
+            event.accept(ModBlocks.VET_STATION.get());
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -183,6 +195,13 @@ public class SamMod
             EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
+        }
+
+        //We register our custom particles as a client-side event
+        // whenever the particles show up
+        @SubscribeEvent
+        public static void registerParticleProvider(RegisterParticleProvidersEvent event){
+            event.registerSpriteSet(ModParticles.SHINY_PARTICLES.get(), ShinyParticles.Provider::new);
         }
     }
 }

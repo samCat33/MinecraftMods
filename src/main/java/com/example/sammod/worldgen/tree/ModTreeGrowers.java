@@ -13,7 +13,7 @@ public class ModTreeGrowers {
     //  Large Tree Key,
     //  Small Tree Key,
     //  Secondary Features Key
-    public static final TreeGrower REDDWOOD = new TreeGrower(SamMod.MOD_ID + ":redwood",
+    public static final TreeGrower REDWOOD = new TreeGrower(SamMod.MOD_ID + ":redwood",
             Optional.of(ModConfiguredFeatures.MEGA_REDWOOD_KEY), Optional.of(ModConfiguredFeatures.REDWOOD_KEY),
             Optional.empty());
 }

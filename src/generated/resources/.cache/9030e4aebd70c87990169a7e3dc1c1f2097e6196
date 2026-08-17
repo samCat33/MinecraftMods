@@ -1,0 +1,6 @@
+// 1.21	2026-08-16T21:29:32.6079942	Global Loot Modifiers : sammod
+d14182cca5d5ad0c2f01a9b42588a8ebe87fd64b data/forge/loot_modifiers/global_loot_modifiers.json
+112f3b657c1f23b8b30030d52f55b721d8a7da20 data/sammod/loot_modifiers/catnip_from_creeper.json
+553f109b24ca72e5043e14295ffcaf54c6651830 data/sammod/loot_modifiers/raw_meteorite_from_shipwrecks.json
+ae0686f8a837af3b7c5e75c6fb73fde0c18fd39b data/sammod/loot_modifiers/rice_seeds_from_short_grass.json
+5e0c38997f59d43fd9ee977c26ce0d8a36b2d8fc data/sammod/loot_modifiers/rice_seeds_from_tall_grass.json

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "sammod:vet_poi",
+      "required": false
+    }
+  ]
+}

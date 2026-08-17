@@ -7,6 +7,7 @@ import com.example.sammod.sound.MySillySounds;
 import com.example.sammod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -163,7 +164,7 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
-            () -> new ModSaplingBlock(ModTreeGrowers.REDDWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),
+            () -> new ModSaplingBlock(ModTreeGrowers.REDWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),
                     () -> SamMod.REDWOOD_SAPLING_BLOCK));
 
     public static final RegistryObject<SlabBlock> REDWOOD_SLAB = registerBlock("redwood_slab",
@@ -192,6 +193,9 @@ public class ModBlocks {
     //Chair block has no occlusion, meaning no shadows
     public static final RegistryObject<Block> CHAIR = registerBlock("chair",
             () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion().strength(1.0F)));
+
+    public static final RegistryObject<Block> VET_STATION = registerBlock("vet_workstation",
+            () -> new Block(BlockBehaviour.Properties.of().strength(2.0F)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

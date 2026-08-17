@@ -6,6 +6,7 @@ import com.example.sammod.item.ModItems;
 import com.example.sammod.item.items.HammerItem;
 import com.example.sammod.item.items.MidasTouchItem;
 import com.example.sammod.potion.ModPotions;
+import com.example.sammod.villager.ModVillagers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -13,12 +14,16 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityEvent;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,15 +33,18 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.level.ExplosionEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 //MOD events implement IModBusEvent and are usually for registering things before the game begins
 //FORGE events happen while the game is running and include things such as using tools, as is the
-//case in this example
+//case for all the events defined below
 
 @Mod.EventBusSubscriber(modid = SamMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
@@ -124,4 +132,70 @@ public class ModEvents {
 
         builder.addMix(Potions.AWKWARD, Items.HONEY_BLOCK, ModPotions.STICKY_POTION.getHolder().get());
     }
+
+    @SubscribeEvent
+    public static void addCustomTrades(VillagerTradesEvent event) {
+
+
+        //Adding trades for the Mason villager
+        if (event.getType() == VillagerProfession.MASON) {
+
+            //We use var because the data type for trades is VERY long
+            var trades = event.getTrades();
+
+            //trades.get(villager level required)
+            //Merchant Offer(cost, optional secondary cost, item/s received,
+            // max uses, xp earned, price multiplier)
+            trades.get(2).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 4),
+                    new ItemStack(ModBlocks.SUSIE_BLOCK.get(), 16), 4, 12, 0.2f
+            ));
+
+            trades.get(2).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModBlocks.CAT_NOTE_BLOCK.get(), 3), 5, 10, 0.2f
+            ));
+
+            trades.get(5).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 64),
+                    new ItemStack(ModBlocks.COAL_CONVERTER.get(), 1), 1, 25, 0
+            ));
+        }
+
+        //Adding trades for the custom veterinarian villager
+        if (event.getType() == ModVillagers.VETERINARIAN.get()) {
+            var trades = event.getTrades();
+
+            trades.get(1).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 2),
+                    new ItemStack(ModItems.CATNIP.get(), 3), 12, 1, 0.05f
+            ));
+
+            trades.get(2).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 5),
+                    new ItemStack(ModBlocks.SUSIE_TNT.get(), 1), 5, 6, 0.1f
+            ));
+
+        }
+    }
+
+
+        //Adding trades for the wandering trader
+        @SubscribeEvent
+        public static void addWanderingTrades(WandererTradesEvent event){
+
+            //Generic trades are more common than rare trades
+            List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
+            List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
+
+            rareTrades.add((trader, random) -> new MerchantOffer(
+               new ItemCost(Items.EMERALD, 20),
+               new ItemStack(ModItems.METEORITE_INGOT.get(),  1), 5, 10, 0.5f
+            ));
+
+            genericTrades.add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 3),
+                    new ItemStack(ModBlocks.CHAIR.get(), 1), 8, 1, 0.05f
+            ));
+        }
 }

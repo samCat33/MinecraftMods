@@ -41,7 +41,7 @@
 
   "item.sammod.triceratops_spawn_egg": "Triceratops Spawn Egg",
   "item.sammod.tomahawk": "Tomahawk",
-  "item.sammod.superstaff": "Super Staff",
+  "item.sammod.water_staff": "Water Staff",
 
   "trim_pattern.sammod.big_s": "Big S",
   "trim_material.sammod.meteorite_ingot": "Meteorite Material",
@@ -88,6 +88,7 @@
   "block.sammod.redwood_sapling": "Redwood Sapling",
 
   "block.sammod.chair": "Chair",
+  "block.sammod.vet_workstation": "Vet Workstation",
 
   "enchantment.sammod.lightning": "Lightning",
 
@@ -108,5 +109,6 @@
   "painting.sammod.rainbow.author": "NewPigwurst",
 
   "entity.sammod.triceratops": "Triceratops",
-  "entity.sammod.tomahawk": "Tomahawk"
+  "entity.sammod.tomahawk": "Tomahawk",
+  "entity.minecraft.villager.sammod.veterinarian": "Veterinarian"
 }

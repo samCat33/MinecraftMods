@@ -98,6 +98,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.REDWOOD_STAIRS.get());
         dropSelf(ModBlocks.REDWOOD_TRAPDOOR.get());
 
+        //Drop the chair when broken
+        dropSelf(ModBlocks.CHAIR.get());
+
+        dropSelf(ModBlocks.VET_STATION.get());
+
         //Drop the rice crop when it is harvested at its maximum age
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.RICE_CROP.get())

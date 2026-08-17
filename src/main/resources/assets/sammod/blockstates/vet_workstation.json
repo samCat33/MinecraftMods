@@ -1,0 +1,6 @@
+{
+  "variants":
+  {
+    "": {"model":  "sammod:block/vet_workstation"}
+  }
+}

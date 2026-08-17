@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "sammod:item/water_staff_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "sammod:item/water_staff_2d"
+    },
+    "ground":{
+      "parent": "sammod:item/water_staff_2d"
+    },
+    "fixed":
+    {
+      "parent": "sammod:item/water_staff_2d"
+    }
+  }
+}

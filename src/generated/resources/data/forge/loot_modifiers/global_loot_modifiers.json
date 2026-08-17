@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "sammod:catnip_from_creeper",
+    "sammod:rice_seeds_from_short_grass",
+    "sammod:rice_seeds_from_tall_grass",
+    "sammod:raw_meteorite_from_shipwrecks"
+  ],
+  "replace": false
+}
