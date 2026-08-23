@@ -107,6 +107,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.REDWOOD_STAIRS);
         blockItem(ModBlocks.REDWOOD_SLAB);
+
+        blockWithItem(ModBlocks.GROWTH_CHAMBER);
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject){

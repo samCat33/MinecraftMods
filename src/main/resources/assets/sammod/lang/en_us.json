@@ -89,6 +89,8 @@
 
   "block.sammod.chair": "Chair",
   "block.sammod.vet_workstation": "Vet Workstation",
+  "block.sammod.pedestal": "Pedestal",
+  "block.sammod.growth_chamber": "Growth Chamber",
 
   "enchantment.sammod.lightning": "Lightning",
 

@@ -1,6 +1,8 @@
 package com.example.sammod;
 
 import com.example.sammod.block.ModBlocks;
+import com.example.sammod.block.entity.ModBlockEntities;
+import com.example.sammod.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.example.sammod.component.ModDataComponentTypes;
 import com.example.sammod.effect.ModEffects;
 import com.example.sammod.enchantment.ModEnchantmentEffects;
@@ -14,15 +16,21 @@ import com.example.sammod.loot.ModLootModifiers;
 import com.example.sammod.particle.ModParticles;
 import com.example.sammod.particle.ShinyParticles;
 import com.example.sammod.potion.ModPotions;
+import com.example.sammod.recipes.ModRecipes;
+import com.example.sammod.screen.ModMenuTypes;
+import com.example.sammod.screen.custom.GrowthChamberScreen;
+import com.example.sammod.screen.custom.PedestalScreen;
 import com.example.sammod.sound.MySillySounds;
 import com.example.sammod.util.ModItemProperties;
 import com.example.sammod.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -42,7 +50,6 @@ public class SamMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "sammod";
-    public static final Block REDWOOD_SAPLING_BLOCK = Blocks.PODZOL;
 
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public SamMod()
@@ -68,6 +75,9 @@ public class SamMod
         ModVillagers.register(modEventBus);
         ModParticles.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -76,6 +86,8 @@ public class SamMod
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
+
+    //This method is used for items that can be put in the composter
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ModItems.UNCOOKED_RICE_BAG.get(), 0.3F);
@@ -171,6 +183,8 @@ public class SamMod
 
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
             event.accept(ModBlocks.VET_STATION.get());
+            event.accept(ModBlocks.PEDESTAL.get());
+            event.accept(ModBlocks.GROWTH_CHAMBER.get());
         }
     }
 
@@ -195,6 +209,9 @@ public class SamMod
             EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+            MenuScreens.register(ModMenuTypes.GROWTH_CHAMBER_MENU.get(), GrowthChamberScreen::new);
         }
 
         //We register our custom particles as a client-side event
@@ -202,6 +219,15 @@ public class SamMod
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event){
             event.registerSpriteSet(ModParticles.SHINY_PARTICLES.get(), ShinyParticles.Provider::new);
+        }
+
+
+        //Register the pedestal block entity renderer for the pedestal block entity
+        @SubscribeEvent
+        public static void registerBlockEntityRenderer(
+                EntityRenderersEvent.RegisterRenderers event
+        ){
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }

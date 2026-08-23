@@ -28,6 +28,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SamMod.MOD_ID);
 
+    public static final Block REDWOOD_SAPLING_BLOCK = Blocks.PODZOL;
+
     //Deepslate diamond ore has a hardness of 4.5f
     //Deepslate blocks have a blast resistance of 3
 
@@ -165,7 +167,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.REDWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),
-                    () -> SamMod.REDWOOD_SAPLING_BLOCK));
+                    () -> REDWOOD_SAPLING_BLOCK));
 
     public static final RegistryObject<SlabBlock> REDWOOD_SLAB = registerBlock("redwood_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of()
@@ -194,8 +196,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHAIR = registerBlock("chair",
             () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion().strength(1.0F)));
 
+    //Pedestal also has no occlusion
+    public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion().strength(1.0F)));
+
     public static final RegistryObject<Block> VET_STATION = registerBlock("vet_workstation",
             () -> new Block(BlockBehaviour.Properties.of().strength(2.0F)));
+
+    public static final RegistryObject<Block> GROWTH_CHAMBER = registerBlock("growth_chamber",
+            () -> new GrowthChamberBlock(BlockBehaviour.Properties.of()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

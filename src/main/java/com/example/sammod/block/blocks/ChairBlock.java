@@ -30,6 +30,8 @@ import java.util.List;
 import java.util.Map;
 
 public class ChairBlock extends HorizontalDirectionalBlock {
+
+    //Every block entity has a MapCodec like this
     public static final MapCodec<ChairBlock> CODEC = simpleCodec(ChairBlock::new);
 
     //This defines the hitbox for the chair (both for collision and selection)

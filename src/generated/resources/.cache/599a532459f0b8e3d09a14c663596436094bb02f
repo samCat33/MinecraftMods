@@ -1,9 +1,10 @@
-// 1.21	2026-08-12T22:07:31.2431084	Block States: sammod
+// 1.21	2026-08-19T15:49:34.6775192	Block States: sammod
 8cdbfe8ae46484a1a32c543a0800d4897f42f856 assets/sammod/blockstates/blueberry_bush.json
 363831fb8e1d6e5346b13c5f9623fe85646b3530 assets/sammod/blockstates/blue_opal_ore.json
 f00fb1627ac7e219d41b5bbcd4dc6a876f3d1904 assets/sammod/blockstates/cat_note_block.json
 8c6fb3bfdf63029a258c515187bf7b5223f61159 assets/sammod/blockstates/coal_converter.json
 af9149e6bc4fe80273224f3fc17a19705008a3ca assets/sammod/blockstates/custom_lamp.json
+f62c1d4729d60ba190cda87658acb3d0224871e5 assets/sammod/blockstates/growth_chamber.json
 eabb0be1a08be943ec35ccbd2153b3327a947730 assets/sammod/blockstates/meteorite_block.json
 c0b2ebb5b81fe108096129f1681b07a126fdafed assets/sammod/blockstates/meteorite_deepslate_ore.json
 249a62bef6c3d858c3eedfbfda2c1d68f835768e assets/sammod/blockstates/meteorite_ore.json
@@ -42,6 +43,7 @@ ae767fdf74f146648446d43584683122b0cdbc6f assets/sammod/models/block/blueberry_bu
 071b6e99700b14be786120d566c311b0f960c84f assets/sammod/models/block/coal_converter.json
 37793315be19c3e008e58b48f6dc4940f1e0ae88 assets/sammod/models/block/custom_lamp_off.json
 ba967b3f560f74b4b4500f87566f7dc0862beba2 assets/sammod/models/block/custom_lamp_on.json
+735695550794652b6e1a25b2a171a9342132ac98 assets/sammod/models/block/growth_chamber.json
 db8693834517250ee0fa7b28553c7ce61bbd42a1 assets/sammod/models/block/meteorite_block.json
 2b29db24755b9424bc2ff96b70b2fea691d11b54 assets/sammod/models/block/meteorite_deepslate_ore.json
 f1c86b50234332546bcbc9d7587dd331151b2a17 assets/sammod/models/block/meteorite_ore.json
@@ -119,6 +121,7 @@ b0cfba267a5f194a4defeffc83cb3e5233376a7f assets/sammod/models/block/susie_stairs
 5f39dbb7f75ac2fd756459882e2bb8850acaa703 assets/sammod/models/item/cat_note_block.json
 274fcfe4f28d15a4ad4e2378da4424e5d40f3076 assets/sammod/models/item/coal_converter.json
 7e0224d9dfb5814a704b81520ab4adf6b2881f49 assets/sammod/models/item/custom_lamp.json
+27b93b49b5a346a230ff47e9fce897943c5a405e assets/sammod/models/item/growth_chamber.json
 eda8e9d89486b9832c7c9b509d8faf298d1404b3 assets/sammod/models/item/meteorite_block.json
 7639e34691b0d3b97bd9458a6f0e4112dacaa71d assets/sammod/models/item/meteorite_deepslate_ore.json
 37c5a3c2d6870e42f708d1814028f75f0fe9eef6 assets/sammod/models/item/meteorite_ore.json

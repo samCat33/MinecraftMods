@@ -1,13 +1,15 @@
-// 1.21	2026-08-12T21:07:50.6518584	Loot Tables
+// 1.21	2026-08-19T15:41:55.1183994	Loot Tables
 f7de5ba8f7319a2073227e946b7105de40956d45 data/sammod/loot_table/blocks/blueberry_bush.json
 b6a17db26bf8c24f47f1fc81b68cd7022ec8f7e2 data/sammod/loot_table/blocks/blue_opal_ore.json
 20b1df9ea5ac3392d7df11c60bc2b01e850d2586 data/sammod/loot_table/blocks/cat_note_block.json
 5125db63080d840ab4f41fc81fc2f0fd66c129de data/sammod/loot_table/blocks/chair.json
 2ecc837cd559215c139846b45ed917f7199f53d9 data/sammod/loot_table/blocks/coal_converter.json
 e8fc4b199e67de2b7f8a576556eb378606685498 data/sammod/loot_table/blocks/custom_lamp.json
+5cdd5e6eadcdf6ac9f91a4ec039e882f0732d045 data/sammod/loot_table/blocks/growth_chamber.json
 16f6b3f407ca655df511e6dfd1a0ea98bfcbdf67 data/sammod/loot_table/blocks/meteorite_block.json
 4bb3bc6a6e22ed5121207ee942d5a70b67bc23fc data/sammod/loot_table/blocks/meteorite_deepslate_ore.json
 90018cc646d759d05f363282ddfd134055d96a93 data/sammod/loot_table/blocks/meteorite_ore.json
+48939d3a52145da2b0e40f14325c0b22209cb70d data/sammod/loot_table/blocks/pedestal.json
 fe319dd1a8b9f49521aff5b46bf71cb3411e3f78 data/sammod/loot_table/blocks/raw_meteorite_block.json
 5cd20fdb9198f3b2fefb005ea8b1f09f6d7bdd7b data/sammod/loot_table/blocks/redwood_door.json
 08db5fb677aa0c1208d523a63169e8ff3df81080 data/sammod/loot_table/blocks/redwood_fence.json
